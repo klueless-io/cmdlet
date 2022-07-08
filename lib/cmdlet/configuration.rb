@@ -21,7 +21,7 @@ module Cmdlet
     attr_accessor :padr_char
 
     def initialize
-      # @tokenizer = Funcky::StringTokenizer.new
+      @tokenizer = Cmdlet::StringTokenizer.new
       @padr_count = 30
       @padr_char = ' '
       @padl_count = 30
