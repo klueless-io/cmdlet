@@ -52,6 +52,7 @@ KConfig.configure(CONFIG_KEY) do |config|
   config.target_folders.add(:lib                  , :app, 'lib/funcky')
   config.target_folders.add(:spec                 , :app, 'spec/funcky')
   config.target_folders.add(:builder              , builder_folder)
+
 end
 
 KConfig.configuration(CONFIG_KEY).debug
