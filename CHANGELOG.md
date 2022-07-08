@@ -1,3 +1,10 @@
+## [0.0.4](https://github.com/klueless-io/cmdlet/compare/v0.0.3...v0.0.4) (2022-07-08)
+
+
+### Bug Fixes
+
+* add basic configuration ([d8ecbb1](https://github.com/klueless-io/cmdlet/commit/d8ecbb17f61600de3b3f5d8987cc132d6e5ba0b2))
+
 ## [0.0.3](https://github.com/klueless-io/cmdlet/compare/v0.0.2...v0.0.3) (2022-07-08)
 
 
