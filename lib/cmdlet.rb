@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+# require 'k_log'
+require 'k_config'
 require_relative 'cmdlet/version'
+require_relative 'cmdlet/configuration'
 
 module Cmdlet
   # raise Cmdlet::Error, 'Sample message'
