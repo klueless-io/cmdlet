@@ -1,3 +1,10 @@
+## [0.0.5](https://github.com/klueless-io/cmdlet/compare/v0.0.4...v0.0.5) (2022-07-08)
+
+
+### Bug Fixes
+
+* add string tokenizer ([9d996ff](https://github.com/klueless-io/cmdlet/commit/9d996ff97545617b894d2f29c4500dc44df492b7))
+
 ## [0.0.4](https://github.com/klueless-io/cmdlet/compare/v0.0.3...v0.0.4) (2022-07-08)
 
 
