@@ -12,12 +12,12 @@ module Cmdlet
       # @return [String] ordinal suffix that would be required for a number
       def parse(value)
         return '' if value.nil? || !value.is_a?(Array)
+
         values = value.reject(&:blank?)
         return '' if value.length.zero?
 
         separator = ','
         values.join(separator)
-
       end
     end
   end
