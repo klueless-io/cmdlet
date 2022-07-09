@@ -1,3 +1,10 @@
+# [0.1.0](https://github.com/klueless-io/cmdlet/compare/v0.0.7...v0.1.0) (2022-07-09)
+
+
+### Features
+
+* generate commandlets ([a61948e](https://github.com/klueless-io/cmdlet/commit/a61948e285d488d3aab68a9ef3bd0c136b87170f))
+
 ## [0.0.7](https://github.com/klueless-io/cmdlet/compare/v0.0.6...v0.0.7) (2022-07-09)
 
 
