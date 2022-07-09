@@ -23,7 +23,7 @@ class CmdletChild < KDirector::Directors::ChildDirector
     builder.cmdlet_setting(:ruby, value)
   end
 
-  def parameter(name, description, splat: false, default: nil, param_type: 'String')
+  def parameter(name, description, splat: nil, default: nil, param_type: 'String')
     builder.add_cmdlet_parameter(
       name,
       description,

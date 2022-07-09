@@ -4,7 +4,10 @@
 require 'k_config'
 require_relative 'cmdlet/version'
 require_relative 'cmdlet/configuration'
+require_relative 'cmdlet/base_cmdlet'
 require_relative 'cmdlet/string_tokenizer'
+
+require_relative 'cmdlet/_'
 
 module Cmdlet
   # raise Cmdlet::Error, 'Sample message'

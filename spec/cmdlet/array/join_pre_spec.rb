@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# JoinPre:
-RSpec.describe Funcky::Array::JoinPre do
+# JoinPre: join an array of values with separator as a string and using the separator at the beginning of string
+RSpec.describe Cmdlet::Array::JoinPre do
   let(:instance) { described_class.new }
 
   describe 'initialize' do
@@ -10,8 +10,8 @@ RSpec.describe Funcky::Array::JoinPre do
     it { is_expected.not_to be_nil }
   end
 
-  describe '#parse' do
-    subject { instance.parse(value) }
+  describe '#call' do
+    subject { instance.call(value) }
 
     let(:value) { nil }
 

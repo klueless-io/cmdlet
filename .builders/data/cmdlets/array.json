@@ -1,0 +1,121 @@
+{
+  "category_key": "array",
+  "cmdlets": [
+    {
+      "name": "join",
+      "description": "join an array of values with separator as a string",
+      "result": "new String formed by joining the array elements with seperator",
+      "category": "array",
+      "category_description": "Array handling routines, eg. join, join_prefix, join_post",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "values",
+          "description": "array of values to join",
+          "splat": false,
+          "default": null,
+          "param_type": "String|Int"
+        },
+        {
+          "name": "separator",
+          "description": "separator between values, defaults to comma",
+          "splat": false,
+          "default": "','",
+          "param_type": "String"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '' if values.nil? || !values.is_a?(Array)\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          values.join(separator)\n"
+    },
+    {
+      "name": "join_pre",
+      "description": "join an array of values with separator as a string and using the separator at the beginning of string",
+      "result": null,
+      "category": "array",
+      "category_description": "Array handling routines, eg. join, join_prefix, join_post",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "values",
+          "description": "array of values to join",
+          "splat": false,
+          "default": null,
+          "param_type": "String|Int"
+        },
+        {
+          "name": "separator",
+          "description": "separator between values, defaults to comma",
+          "splat": false,
+          "default": "','",
+          "param_type": "String"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '' if values.nil? || !values.is_a?(Array)\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          \"#{separator}#{values.join(separator)}\"\n"
+    },
+    {
+      "name": "join_pre",
+      "description": "join an array of values with separator as a string and using the separator at the beginning of string",
+      "result": null,
+      "category": "array",
+      "category_description": "Array handling routines, eg. join, join_prefix, join_post",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "values",
+          "description": "array of values to join",
+          "splat": false,
+          "default": null,
+          "param_type": "String|Int"
+        },
+        {
+          "name": "separator",
+          "description": "separator between values, defaults to comma",
+          "splat": false,
+          "default": "','",
+          "param_type": "String"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '' if values.nil? || !values.is_a?(Array)\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          \"#{separator}#{values.join(separator)}\"\n"
+    },
+    {
+      "name": "join_post",
+      "description": "join an array of values with separator as a string and using the separator at the end of string",
+      "result": null,
+      "category": "array",
+      "category_description": "Array handling routines, eg. join, join_prefix, join_post",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "values",
+          "description": "array of values to join",
+          "splat": false,
+          "default": null,
+          "param_type": "String|Int"
+        },
+        {
+          "name": "separator",
+          "description": "separator between values, defaults to comma",
+          "splat": false,
+          "default": "','",
+          "param_type": "String"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "            return '' if values.nil? || !values.is_a?(Array)\n            values = values.reject(&:blank?)\n            return '' if values.length.zero?\n\n            \"#{values.join(separator)}#{separator}\"\n"
+    }
+  ]
+}

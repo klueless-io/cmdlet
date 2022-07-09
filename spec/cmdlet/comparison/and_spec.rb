@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Join: join an array of values with separator as a string
-RSpec.describe Cmdlet::Array::Join do
+# And: Return true if **all of** the given values are truthy.
+RSpec.describe Cmdlet::Comparison::And do
   let(:instance) { described_class.new }
 
   describe 'initialize' do
@@ -15,8 +15,8 @@ RSpec.describe Cmdlet::Array::Join do
 
     let(:value) { nil }
 
-    context 'safely handle nil' do
-      it { is_expected.to eq('') }
-    end
+    # context 'safely handle nil' do
+    #   it { is_expected.to eq('') }
+    # end
   end
 end

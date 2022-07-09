@@ -23,14 +23,6 @@
     {
       "name": "transform",
       "description": "Tokenize and apply case and/or separator"
-    },
-    {
-      "name": "comparison",
-      "description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc."
-    },
-    {
-      "name": "inflection",
-      "description": "Inflection handling routines, eg. pluralize, singular, ordinalize"
     }
   ]
 }

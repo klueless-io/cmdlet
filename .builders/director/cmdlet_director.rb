@@ -20,6 +20,14 @@ class CmdletDirector < KDirector::Directors::BaseDirector
     data_access.category_director.categories
   end
 
+  def generate
+    build_cmdlets
+    save_cmdlets
+    run_cop
+
+    self
+  end
+
   def build_cmdlets
     builder.cmdlets.each do |cmdlet|
       cmdlet_file = "#{cmdlet[:category]}/#{cmdlet[:name]}.rb"
@@ -31,10 +39,20 @@ class CmdletDirector < KDirector::Directors::BaseDirector
       add("#{cmdlet[:category]}/#{cmdlet[:name]}_spec.rb", template_file: 'cmdlet_spec.rb', cmdlet: cmdlet)
     end
 
-    
+    self
+  end
+
+  def run_cop
     Dir.chdir(k_builder.target_folders.get(:app)) do
       k_builder.run_cop('**/*.rb', fix_unsafe: true)
     end
+
+    self
+  end
+
+  def save_cmdlets
+    cd(:builder_data)
+    add("cmdlets/#{builder.category_key}.json", content: builder.to_json)
 
     self
   end

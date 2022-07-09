@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# {{camel cmdlet.name}}: {{cmdlet.function_description}}
-RSpec.describe Funcky::{{camel cmdlet.category}}::{{camel cmdlet.name}} do
+# {{camel cmdlet.name}}: {{cmdlet.description}}
+RSpec.describe Cmdlet::{{camel cmdlet.category}}::{{camel cmdlet.name}} do
   let(:instance) { described_class.new }
   
   describe 'initialize' do
@@ -10,8 +10,8 @@ RSpec.describe Funcky::{{camel cmdlet.category}}::{{camel cmdlet.name}} do
     it { is_expected.not_to be_nil }
   end
 
-  describe '#parse' do
-    subject { instance.parse(value) }
+  describe '#call' do
+    subject { instance.call(value) }
 
     let(:value) { nil }
 

@@ -9,6 +9,12 @@ class CategoryDirector < KDirector::Directors::BaseDirector
     self
   end
 
+  def generate
+    generate_require_all_cmdlets
+
+    self
+  end
+
   def save_categories(**opts)
     cd(:builder_data)
     add('categories.json', content: builder.to_json, **opts)
@@ -19,4 +25,15 @@ class CategoryDirector < KDirector::Directors::BaseDirector
   def osave_categories(**opts)
     save_categories(**{ open: true }.merge(opts))
   end
+
+  private
+
+  def generate_require_all_cmdlets
+    cd(:lib)
+    add('_.rb',
+      template_file: 'require_all_cmdlets.rb',
+      cmdlets: data_access.cmdlet.all_cmdlets)
+
+  end
+  
 end
