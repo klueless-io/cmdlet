@@ -38,9 +38,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   # spec.extensions    = ['ext/cmdlet/extconf.rb']
 
-  spec.metadata = {
-    'rubygems_mfa_required' => 'true'
-  }
+  # spec.metadata = {
+  #   'rubygems_mfa_required' => 'true'
+  # }
 
   spec.add_dependency 'activesupport' , '~> 6'
   spec.add_dependency 'k_config', '~> 0.0.3'

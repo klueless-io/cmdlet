@@ -49,10 +49,10 @@ KConfig.configure(CONFIG_KEY) do |config|
   config.template_folders.add(:template           , File.expand_path('.templates', Dir.pwd))
 
   config.target_folders.add(:app                  , base_folder)
-  config.target_folders.add(:lib                  , :app, 'lib/funcky')
-  config.target_folders.add(:spec                 , :app, 'spec/funcky')
+  config.target_folders.add(:lib                  , :app, 'lib/cmdlet')
+  config.target_folders.add(:spec                 , :app, 'spec/cmdlet')
   config.target_folders.add(:builder              , builder_folder)
-
+  config.target_folders.add(:builder_data         , :builder, 'data')
 end
 
 KConfig.configuration(CONFIG_KEY).debug
@@ -62,6 +62,7 @@ resource_manager = area.resource_manager
 resource_manager
   .fileset
   .glob('*.rb', exclude: ['boot.rb'])
+  .glob('documents/**/*.rb')
   .glob('generators/**/*.rb')
 resource_manager.add_resources
 

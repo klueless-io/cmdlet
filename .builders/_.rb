@@ -1,1 +1,5 @@
-require_relative './documents/_'
+# require_relative './documents/_'
+require_relative './director/category_director'
+require_relative './director/cmdlet_builder'
+require_relative './director/cmdlet_director'
+require_relative './director/cmdlet_child'

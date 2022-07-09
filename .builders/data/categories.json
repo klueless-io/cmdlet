@@ -1,0 +1,36 @@
+{
+  "categories": [
+    {
+      "name": "case",
+      "description": "Tokenize and apply case and/or separator"
+    },
+    {
+      "name": "comparison",
+      "description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc."
+    },
+    {
+      "name": "inflection",
+      "description": "Inflection handling routines, eg. pluralize, singular, ordinalize"
+    },
+    {
+      "name": "string",
+      "description": "String handling helpers"
+    },
+    {
+      "name": "a_array",
+      "description": "Array handling routines, eg. join, join_prefix, join_post"
+    },
+    {
+      "name": "a_transform",
+      "description": "Tokenize and apply case and/or separator"
+    },
+    {
+      "name": "a_comparison",
+      "description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc."
+    },
+    {
+      "name": "a_inflection",
+      "description": "Inflection handling routines, eg. pluralize, singular, ordinalize"
+    }
+  ]
+}
