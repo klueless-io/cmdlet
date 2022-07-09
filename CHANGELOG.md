@@ -1,3 +1,11 @@
+## [0.0.7](https://github.com/klueless-io/cmdlet/compare/v0.0.6...v0.0.7) (2022-07-09)
+
+
+### Bug Fixes
+
+* add category director ([3b72b72](https://github.com/klueless-io/cmdlet/commit/3b72b72d9f739c9a3711f14a640bb6d527e17140))
+* add category director ([cea0f1a](https://github.com/klueless-io/cmdlet/commit/cea0f1ae37bfbb67d634f18cf1d315a80c1f6082))
+
 ## [0.0.6](https://github.com/klueless-io/cmdlet/compare/v0.0.5...v0.0.6) (2022-07-08)
 
 
