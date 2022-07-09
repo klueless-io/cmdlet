@@ -1,25 +1,22 @@
 # frozen_string_literal: true
 
 class CategoryDirector < KDirector::Directors::BaseDirector
+  defaults(builder_type: CategoryBuilder, on_exist: :write, on_action: :execute)
+
   def category(name, description)
-    value = {
-      name: name,
-      description: description
-    }
-
-    builder.add(:categories, value: value)
+    builder.category(name, description)
 
     self
   end
 
-  def category_file
-    k_builder.target_folders.join(:builder_data, 'categories.json')
-  end
-
-  def save_categories
+  def save_categories(**opts)
     cd(:builder_data)
-    add('categories.json', content: builder.to_json)
+    add('categories.json', content: builder.to_json, **opts)
 
     self
+  end
+
+  def osave_categories(**opts)
+    save_categories(**{ open: true }.merge(opts))
   end
 end

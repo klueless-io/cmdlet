@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-# reference: https://github.com/rails/rails/blob/master/activesupport/lib/active_support/inflector/methods.rb
-
 module Cmdlet
   # {{cmdlet.category_description}}
   module {{camel cmdlet.category}}
-    # {{camel cmdlet.name}}: {{cmdlet.command_description}}
+    # {{camel cmdlet.name}}: {{cmdlet.description}}
     class {{camel cmdlet.name}} < Funcky::BaseFunction
       {{#each cmdlet.usecases}}
       # @example
@@ -16,9 +14,11 @@ module Cmdlet
       #
       {{/each}}
       #
-      # @param [String|Int] value - numeric value
-      # @return [String] ordinal suffix that would be required for a number
-      def parse(value)
+      {{#each cmdlet.parameters}}
+      # @param [{{./param_type}}] {{./name}} - {{./description}}
+      {{/each}}
+      # @return [String] {{cmdlet.result}}
+      def parse({{#each cmdlet.parameters}}{{./name}}{{#if ./default}} = {{{./default}}}{{/if}}{{#if @last}}{{^}}, {{/if}}{{/each}})
 {{{cmdlet.ruby}}}
       end
     end

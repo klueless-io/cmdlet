@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 def use_cases
   return @use_cases unless @use_cases.nil?
-  
-  result = KDoc.model :document do
 
+  result = KDoc.model :document do
     # table :inputs do
     #   fields :name, :value
 
@@ -18,9 +19,9 @@ def use_cases
 
     # end
 
-    sentence1 = "The quick  brown fox, jumped  over the lazy dog"
-    sentence2 = "coyote and the acme company"
-    text1     = "the Quick brown Fox 99"
+    sentence1 = 'The quick  brown fox, jumped  over the lazy dog'
+    sentence2 = 'coyote and the acme company'
+    text1     = 'the Quick brown Fox 99'
 
     table :rows do
       # fields :category, :function, :input, :commands, :expected_value
@@ -62,37 +63,36 @@ def use_cases
       row :a_transform  , :title          , [text1]     , 'The Quick Brown Fox 99'
       row :a_transform  , :title          , [sentence1] , 'The Quick Brown Fox Jumped over the Lazy Dog'
       row :a_transform  , :upper          , [text1]     , 'THE QUICK BROWN FOX 99'
-      
 
       row :a_comparison , :and            , [nil, nil]        , false
       row :a_comparison , :and            , ['data', nil]     , false
       row :a_comparison , :and            , [nil, 'data']     , false
-      row :a_comparison , :and            , ['data', 'data']  , true
-      row :a_comparison , :and            , ['aaa', 'bbb']    , true
+      row :a_comparison , :and            , %w[data data]  , true
+      row :a_comparison , :and            , %w[aaa bbb]    , true
 
       # DEFAULT does not make sense in comparison
-      row :a_comparison , :default        , [nil, 'happy'] , "happy"
-      row :a_comparison , :default        , ['sad', 'happy'] , "sad"
-      row :a_comparison , :default        , [nil, nil, nil, nil, 'david'] , "david"
-      row :a_comparison , :default        , ['', 'happy'] , "happy"
+      row :a_comparison , :default        , [nil, 'happy'] , 'happy'
+      row :a_comparison , :default        , %w[sad happy] , 'sad'
+      row :a_comparison , :default        , [nil, nil, nil, nil, 'david'] , 'david'
+      row :a_comparison , :default        , ['', 'happy'] , 'happy'
 
       # type: :strict, :equiv, :cast, :insensitive
-      row :a_comparison , :eq             , [111, '111'  ], false
-      row :a_comparison , :eq             , [111, 111.0  ], false
-      row :a_comparison , :eq             , ['aaa', 'aaa'], true
-      row :a_comparison , :eq             , ['aaa', 'bbb'], false
-      row :a_comparison , :eq             , [:aaa,  :aaa] , true
+      row :a_comparison , :eq             , [111, '111'], false
+      row :a_comparison , :eq             , [111, 111.0], false
+      row :a_comparison , :eq             , %w[aaa aaa], true
+      row :a_comparison , :eq             , %w[aaa bbb], false
+      row :a_comparison , :eq             , %i[aaa aaa] , true
       row :a_comparison , :eq             , ['aaa', :aaa] , false
-      row :a_comparison , :eq             , ['aaa', 'bbb'], false
-      row :a_comparison , :eq             , ['aaa', 'AAA'], false
+      row :a_comparison , :eq             , %w[aaa bbb], false
+      row :a_comparison , :eq             , %w[aaa AAA], false
 
       row :a_comparison , :gt             , [2, 1] , true
       row :a_comparison , :gt             , [2, 2] , false
-      
+
       row :a_comparison , :gte            , [1, 2] , false
       row :a_comparison , :gte            , [1, 1] , true
       row :a_comparison , :gte            , [2, 1] , true
-      
+
       row :a_comparison , :lt             , [1, 2] , true
       row :a_comparison , :lt             , [2, 1] , false
 
@@ -102,15 +102,14 @@ def use_cases
 
       row :a_comparison , :ne             , [1, 2] , true
       row :a_comparison , :ne             , [1, 1] , false
-      
+
       row :a_comparison , :or             , [nil, nil]        , false
       row :a_comparison , :or             , ['data', nil]     , true
       row :a_comparison , :or             , [nil, 'data']     , true
-      row :a_comparison , :or             , ['data', 'data']  , true
-      row :a_comparison , :or             , ['aaa', 'bbb']    , true
+      row :a_comparison , :or             , %w[data data]  , true
+      row :a_comparison , :or             , %w[aaa bbb]    , true
       # row :text1          , %i[backslash]     , 'the\quick\brown\fox99'
       # row :text1          , %i[camel]         , 'TheQuickBrownFox99'
-
 
       # row :sentence3      , %i[plural]        , "jumped over the lazy dogs"
       # row :title          , %i[plural]        , "Account Categories"
@@ -120,17 +119,16 @@ def use_cases
       # row :bsb_account    , %i[lower snake]   , "abc_123"
       # row :bsb_account    , %i[slash]         , "ABC/123"
     end
-
   end
-  
+
   @use_cases = result.raw_data_struct.rows
 end
 @use_cases = nil
 
-  # def self.camel_case(string, tokenizer = PreservePrefixedUnderscoreTokenizer.new)
-  #   # DAVE INPUT 9 Oct 21 from lucky_case play
-  #   # dependency injection: to use enhanced tokenizer
-  #   a = split_case_string string
-  #   converted = ([a[0]] + a[1..-1].map { |e| capital e }).join('')
-  #   tokenizer.parse(converted)
-  # end
+# def self.camel_case(string, tokenizer = PreservePrefixedUnderscoreTokenizer.new)
+#   # DAVE INPUT 9 Oct 21 from lucky_case play
+#   # dependency injection: to use enhanced tokenizer
+#   a = split_case_string string
+#   converted = ([a[0]] + a[1..-1].map { |e| capital e }).join('')
+#   tokenizer.parse(converted)
+# end

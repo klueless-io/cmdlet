@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 def cmdlets
   commands.map do |command|
     category = categories.find { |c| c.name == command.category }
-    
+
     log.error("Category '#{command.category}' not found") unless category
-  
+
     OpenStruct.new(
       category: command.category,
       name: command.name,
@@ -12,15 +14,15 @@ def cmdlets
       ruby: command.ruby,
       usecases: use_cases
         .select { |uc| uc.category == command.category && uc.command == command.name }
-        .map { |uc| 
+        .map do |uc|
           OpenStruct.new({
-            category:         uc.category,
-            command:         uc.command,
-            inputs:           uc.inputs,
-            nice_inputs:      nice_inputs(uc.inputs),
-            expected_output:  uc.expected_output 
-          })
-        }
+                           category: uc.category,
+                           command: uc.command,
+                           inputs: uc.inputs,
+                           nice_inputs: nice_inputs(uc.inputs),
+                           expected_output: uc.expected_output
+                         })
+        end
     )
   end
 end

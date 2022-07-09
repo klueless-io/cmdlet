@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 def commands
   return @commands unless @commands.nil?
-  
+
   result = KDoc.model :document do
     table :rows do
       fields :category, :name, :alias, :description, :ruby # , f(name: :params, default: [:value])
@@ -23,7 +25,7 @@ def commands
       #   it { is_expected.to eq('the,quick,fox') }
       # end
 
-      row :array                , :join            , []    , "join an array of values with separator as a string", <<-'RUBY'
+      row :array                , :join            , []    , 'join an array of values with separator as a string', <<-'RUBY'
         return '' if value.nil? || !value.is_a?(Array)
         values = value.reject(&:blank?)
         return '' if value.length.zero?
@@ -32,14 +34,14 @@ def commands
         values.join(separator)
       RUBY
 
-      # row :array                , :join_pre        , []    , "join an array of values with separator as a string and using the separator at the beginning of string", <<-'RUBY'
-      #   return '' if value.nil? || !value.is_a?(Array)
-      #   values = value.reject(&:blank?)
-      #   return '' if value.length.zero?
+      row :array                , :join_pre , [] , 'join an array of values with separator as a string and using the separator at the beginning of string', <<-'RUBY'
+        return '' if value.nil? || !value.is_a?(Array)
+        values = value.reject(&:blank?)
+        return '' if value.length.zero?
 
-      #   separator = ','
-      #   "#{separator}#{value.join(separator)}"
-      # RUBY
+        separator = ','
+        "#{separator}#{value.join(separator)}"
+      RUBY
 
       # row :array                , :join_post       , []    , "join an array of values with separator as a string and using the separator at the end of string", <<-'RUBY'
       #   return '' if value.nil? || !value.is_a?(Array)
@@ -59,7 +61,7 @@ def commands
       # RUBY
 
       # row :a_transform            , :constant             , [:constantize]                   , "", <<-'RUBY'
-      #   tokenizer.parse(value, separator: '_').upcase      
+      #   tokenizer.parse(value, separator: '_').upcase
       # RUBY
 
       # row :a_transform            , :dash                 , [:dasherize]                     , "convert to dash notation", <<-'RUBY'
@@ -81,7 +83,7 @@ def commands
       # RUBY
 
       # # row :a_transform            , :format_as            , []                               , "", <<-'RUBY'
-      
+
       # # RUBY
 
       # row :a_transform            , :proper            , []                               , "Proper case capitalizes the first letter of ALL words in a string", <<-'RUBY'
@@ -129,7 +131,6 @@ def commands
       #   value.upcase
       # RUBY
 
-  
       # row :a_comparison         , :and                  , [:all] , "", <<-'RUBY'
       #   values.all? { |value| value }
       # RUBY
@@ -177,8 +178,6 @@ def commands
       #   values.any? { |value| value }
       # RUBY
 
-
-
       # row :a_inflection         , :ordinal              , [] , "The suffix that should be added to a number to denote the position in an ordered sequence such as 1st, 2nd, 3rd, 4th", <<-RUBY
       #   return '' if value.nil?
 
@@ -216,11 +215,11 @@ def commands
       #     value.pluralize(count)
       #   end
       # RUBY
-      
+
       # row :a_inflection         , :singularize          , [] , ""
     end
   end
-  
+
   @commands = result.raw_data_struct.rows
 end
 @commands = nil

@@ -1,72 +1,65 @@
 # frozen_string_literal: true
 
 class CmdletBuilder < KDirector::Builders::ActionsBuilder
-  attr_reader :current_helper
-  # attr_accessor :actions
-  # attr_accessor :last_action
+  attr_reader :current_cmdlet
 
   def initialize
     super
 
-    dom[:helpers] = []
-    dom[:categories] = []
-    # @actions = []
-    # @last_action = {}
+    dom[:category_key] = nil
+    dom[:cmdlets] = []
   end
 
-  def category(name, description)
-    dom[:categories] << {
-      name: name,
-      description: description,
-    }
+  def category_key
+    dom[:category_key]
   end
 
-  def helpers
-    dom[:helpers]
+  def category_key=(value)
+    set(:category_key, value: value)
   end
 
-  def add_helper
-    @current_helper = new_helper
-    dom[:helpers] << current_helper
+  def cmdlets
+    dom[:cmdlets]
   end
 
-  def helper_setting(name, value)
-    @current_helper[name] = value
+  def add_cmdlet
+    @current_cmdlet = new_cmdlet
+    dom[:cmdlets] << current_cmdlet
   end
 
-  def add_helper_parameter(name, description, splat: false)
+  def cmdlet_setting(name, value)
+    @current_cmdlet[name] = value
+  end
+
+  def add_cmdlet_parameter(name, description, **opts)
     parameter = {
       name: name,
-      description: description,
-      splat: splat
-    }
+      description: description
+    }.merge(opts)
 
-    @current_helper[:parameters] << parameter
+    @current_cmdlet[:parameters] << parameter
   end
 
-  def add_helper_example(value)
+  def add_cmdlet_example(value)
     lines = value.split("\n")
     value = lines.map { |line| "        # #{line.strip}" }.join("\n")
 
-    @current_helper[:examples] << value
+    @current_cmdlet[:examples] << value
   end
-
 
   private
 
-  def new_helper
+  def new_cmdlet
+    category = data_access.category.find_category(category_key)
+
     {
       name: nil,
       description: nil,
       result: nil,
-      category: nil,
-      category_description: nil,
+      category: category[:name],
+      category_description: category[:description],
       base_class_require: nil,
       base_class: nil,
-      example_input_value: nil,
-      example_output_value: nil,
-      test_input_value: nil,
-      test_output_value: nil,
       parameters: [],
       examples: []
     }

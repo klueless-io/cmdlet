@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-# {{camel command.name}}: {{command.function_description}}
-RSpec.describe Funcky::{{camel command.category}}::{{camel command.name}} do
+# JoinPost:
+RSpec.describe Funcky::Array::JoinPost do
   let(:instance) { described_class.new }
-  
+
   describe 'initialize' do
     subject { instance }
-  
+
     it { is_expected.not_to be_nil }
   end
 

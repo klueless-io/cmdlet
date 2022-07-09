@@ -3,19 +3,19 @@
 module Cmdlet
   # Array handling routines, eg. join, join_prefix, join_post
   module Array
-    # Join: join an array of values with separator as a string
-    class Join < Funcky::BaseFunction
+    # JoinPost: join an array of values with separator as a string and using the separator at the end of string
+    class JoinPost < Funcky::BaseFunction
       #
       # @param [String|Int] values - array of values to join
       # @param [String] separator - separator between values, defaults to comma
-      # @return [String] new String formed by joining the array elements with seperator
+      # @return [String]
       def parse(values, separator = ',')
         return '' if values.nil? || !values.is_a?(Array)
 
         values = values.reject(&:blank?)
         return '' if values.length.zero?
 
-        values.join(separator)
+        "#{values.join(separator)}#{separator}"
       end
     end
   end

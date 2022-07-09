@@ -1,6 +1,6 @@
+# frozen_string_literal: true
 
 def category_blueprint
-
   fn_builder
     .init
     .category(:array      , active: 0 , title: 'Array'       , description: 'Functions for working with Array')
@@ -24,11 +24,9 @@ def category_blueprint
     .category(:regex      , active: 0 , title: 'Regex'       , description: 'Functions for working with Regex')
     .category(:string     , active: 0 , title: 'String'      , description: 'Functions for working with String')
     .category(:url        , active: 0 , title: 'Url'         , description: 'Functions for working with Url')
-
 end
 
 def function_blueprint
-
   fn_builder
     .init
     .for_category(:array)
@@ -41,11 +39,11 @@ def function_blueprint
     .for_category(:html)
     .for_category(:i18n)
     .for_category(:inflection)
-      .function(:ordinal)
-      .function(:ordinalize)
-      .function(:pluralize_by_number)
-      .function(:pluralize)
-      .function(:singularize)
+    .function(:ordinal)
+    .function(:ordinalize)
+    .function(:pluralize_by_number)
+    .function(:pluralize)
+    .function(:singularize)
     .for_category(:logging)
     .for_category(:markdown)
     .for_category(:match)
@@ -57,7 +55,6 @@ def function_blueprint
     .for_category(:regex)
     .for_category(:string)
     .for_category(:url)
-
 end
 
 # {{arrayify}}
