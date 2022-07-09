@@ -1,3 +1,10 @@
+## [0.0.6](https://github.com/klueless-io/cmdlet/compare/v0.0.5...v0.0.6) (2022-07-08)
+
+
+### Bug Fixes
+
+* add tests for configuration ([59a764f](https://github.com/klueless-io/cmdlet/commit/59a764f99f84dbe1c5b1022e8fdc2386fcced92a))
+
 ## [0.0.5](https://github.com/klueless-io/cmdlet/compare/v0.0.4...v0.0.5) (2022-07-08)
 
 
