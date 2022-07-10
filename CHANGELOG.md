@@ -1,3 +1,11 @@
+## [0.1.2](https://github.com/klueless-io/cmdlet/compare/v0.1.1...v0.1.2) (2022-07-10)
+
+
+### Bug Fixes
+
+* add comparison :or ([633633d](https://github.com/klueless-io/cmdlet/commit/633633d2a22b98a0de1acf6257feb3603a2f2c39))
+* add comparison :or, :and, :lt, :lte, :gt, :gte, :ne, :eq, :default ([000cb1a](https://github.com/klueless-io/cmdlet/commit/000cb1a3cbd643abcb5dac6828972ec94c9f53a8))
+
 ## [0.1.1](https://github.com/klueless-io/cmdlet/compare/v0.1.0...v0.1.1) (2022-07-10)
 
 
