@@ -11,12 +11,7 @@ RSpec.describe Cmdlet::Array::JoinPre do
   end
 
   describe '#call' do
-    subject { instance.call(value) }
-
-    let(:value) { nil }
-
-    context 'safely handle nil' do
-      it { is_expected.to eq('') }
-    end
+    it { expect(instance.call([1, 2, 3])).to eq(',1,2,3') }
+    it { expect(instance.call(%w[a b c], ' | ')).to eq(' | a | b | c') }
   end
 end

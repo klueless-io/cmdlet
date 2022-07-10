@@ -57,7 +57,7 @@
       "examples": [
 
       ],
-      "ruby": "          return false if values.nil? || values.length == 0\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          \"#{separator}#{values.join(separator)}\"\n"
+      "ruby": "          return '' if values.nil? || !values.is_a?(::Array)\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          \"#{separator}#{values.join(separator)}\"\n"
     },
     {
       "name": "join_pre",
@@ -86,7 +86,7 @@
       "examples": [
 
       ],
-      "ruby": "          return false if values.nil? || values.length == 0\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          \"#{separator}#{values.join(separator)}\"\n"
+      "ruby": "          return '' if values.nil? || !values.is_a?(::Array)\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          \"#{separator}#{values.join(separator)}\"\n"
     },
     {
       "name": "join_post",
@@ -115,7 +115,7 @@
       "examples": [
 
       ],
-      "ruby": "            return '' if values.nil? || !values.is_a?(Array)\n            values = values.reject(&:blank?)\n            return '' if values.length.zero?\n\n            \"#{values.join(separator)}#{separator}\"\n"
+      "ruby": "            return '' if values.nil? || !values.is_a?(::Array)\n            values = values.reject(&:blank?)\n            return '' if values.length.zero?\n\n            \"#{values.join(separator)}#{separator}\"\n"
     }
   ]
 }
