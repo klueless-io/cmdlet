@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/klueless-io/cmdlet/compare/v0.1.0...v0.1.1) (2022-07-10)
+
+
+### Bug Fixes
+
+* add specs ([80f384f](https://github.com/klueless-io/cmdlet/commit/80f384f9f7cd1c1ea67396bb12d3119c433ea139))
+
 # [0.1.0](https://github.com/klueless-io/cmdlet/compare/v0.0.7...v0.1.0) (2022-07-09)
 
 
