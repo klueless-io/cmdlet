@@ -3,13 +3,13 @@
 module Cmdlet
   # Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc.
   module Comparison
-    # And: Return true if **all of** the given values are truthy.
-    class And < Cmdlet::BaseCmdlet
+    # Or: Return true if any value is truthy.
+    class Or < Cmdlet::BaseCmdlet
       #
       # @param [Object] values - list of values (via *splat) to be checked via AND condition
-      # @return [String] return true when every value is truthy
+      # @return [String] return true when first value is truthy
       def call(*values)
-        values.all? { |value| value }
+        values.any? { |value| value }
       end
     end
   end

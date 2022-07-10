@@ -15,6 +15,17 @@ KManager.action :comparison_commands do
           values.all? { |value| value }
         RUBY
       end
+      .cmdlet do
+        name :or
+        description           'Return true if any value is truthy.'
+        result                'return true when first value is truthy'
+
+        parameter             :values, 'list of values (via *splat) to be checked via AND condition', splat: '*', param_type: 'Object'
+
+        ruby <<-RUBY
+          values.any? { |value| value }
+        RUBY
+      end
     .generate
     .debug
   end

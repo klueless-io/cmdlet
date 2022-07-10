@@ -22,6 +22,28 @@
 
       ],
       "ruby": "          values.all? { |value| value }\n"
+    },
+    {
+      "name": "or",
+      "description": "Return true if any value is truthy.",
+      "result": "return true when first value is truthy",
+      "category": "comparison",
+      "category_description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc.",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "values",
+          "description": "list of values (via *splat) to be checked via AND condition",
+          "splat": "*",
+          "default": null,
+          "param_type": "Object"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          values.any? { |value| value }\n"
     }
   ]
 }

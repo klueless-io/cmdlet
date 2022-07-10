@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# And: Return true if **all of** the given values are truthy.
-RSpec.describe Cmdlet::Comparison::And do
+# Or: Return true if any value is truthy.
+RSpec.describe Cmdlet::Comparison::Or do
   let(:instance) { described_class.new }
 
   describe 'initialize' do
@@ -12,7 +12,7 @@ RSpec.describe Cmdlet::Comparison::And do
 
   describe '#call' do
     it { expect(instance.call(nil)).to be_falsey }
-    it { expect(instance.call(0, 1, 2, 3)).to be_truthy }
-    it { expect(instance.call(nil, 2, 3, 3)).to be_falsey }
+    it { expect(instance.call(nil, nil)).to be_falsey }
+    it { expect(instance.call(nil, 1, nil)).to be_truthy }
   end
 end
