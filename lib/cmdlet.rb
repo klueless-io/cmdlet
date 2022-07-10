@@ -2,6 +2,8 @@
 
 # require 'k_log'
 require 'k_config'
+require 'active_support/core_ext/integer/inflections'
+
 require_relative 'cmdlet/version'
 require_relative 'cmdlet/configuration'
 require_relative 'cmdlet/base_cmdlet'

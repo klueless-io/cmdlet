@@ -1,0 +1,129 @@
+{
+  "category_key": "inflection",
+  "cmdlets": [
+    {
+      "name": "ordinal",
+      "description": "The suffix that should be added to a number to denote the position in an ordered sequence such as 1st, 2nd, 3rd, 4th",
+      "result": "ordinal suffix that would be required for a number",
+      "category": "inflection",
+      "category_description": "Inflection handling routines, eg. pluralize, singular, ordinalize",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - numeric value",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '' if value.nil?\n\n          value = value.to_i if value.is_a? String\n\n          value.ordinal\n"
+    },
+    {
+      "name": "ordinalize",
+      "description": "Turns a number into an ordinal string used to denote the position in an ordered sequence such as 1st, 2nd, 3rd, 4th.",
+      "result": "number value turned to 1st, 2nd, 3rd, 4th etc.",
+      "category": "inflection",
+      "category_description": "Inflection handling routines, eg. pluralize, singular, ordinalize",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - numeric value",
+          "splat": null,
+          "default": null,
+          "param_type": "Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '' if value.nil?\n\n          value = value.to_i if value.is_a? String\n\n          value.ordinalize\n"
+    },
+    {
+      "name": "pluralize",
+      "description": "Returns the plural form of the word in the string",
+      "result": "value in plural form",
+      "category": "inflection",
+      "category_description": "Inflection handling routines, eg. pluralize, singular, ordinalize",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - value to pluralize",
+          "splat": null,
+          "default": null,
+          "param_type": "String"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '' if value.nil?\n\n          value = value.to_s if value.is_a?(Symbol)\n\n          value.pluralize\n"
+    },
+    {
+      "name": "pluralize_by_number",
+      "description": "Returns the plural form of the word based on a count",
+      "result": "value and number are used to calculate plural/singular form",
+      "category": "inflection",
+      "category_description": "Inflection handling routines, eg. pluralize, singular, ordinalize",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - value to pluralize",
+          "splat": null,
+          "default": null,
+          "param_type": "String"
+        },
+        {
+          "name": "count",
+          "description": "count used to determine pluralization",
+          "splat": null,
+          "default": null,
+          "param_type": "Int"
+        },
+        {
+          "name": "format",
+          "description": "(Optional) what format should output be. :word, :number_word",
+          "splat": null,
+          "default": null,
+          "param_type": "String"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '' if value.nil?\n\n          count = count.to_i if count.is_a? String\n          format = :word if format.nil?\n\n          case format.to_sym\n          when :number_word, :number_and_word\n            \"#{count} #{value.pluralize(count)}\"\n          else # aka :word\n            value.pluralize(count)\n          end\n"
+    },
+    {
+      "name": "singularize",
+      "description": "The reverse of #pluralize, returns the singular form of a word in a string",
+      "result": "plural value turned to singular value",
+      "category": "inflection",
+      "category_description": "Inflection handling routines, eg. pluralize, singular, ordinalize",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - value to singularized",
+          "splat": null,
+          "default": null,
+          "param_type": "String"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '' if value.nil?\n\n          value = value.to_s if value.is_a?(Symbol)\n\n          value.singularize\n"
+    }
+  ]
+}
