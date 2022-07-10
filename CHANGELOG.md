@@ -1,3 +1,10 @@
+## [0.2.1](https://github.com/klueless-io/cmdlet/compare/v0.2.0...v0.2.1) (2022-07-10)
+
+
+### Bug Fixes
+
+* add case commandlets ([b269f2a](https://github.com/klueless-io/cmdlet/commit/b269f2a770dd698119f360d47756b47bd5b57516))
+
 # [0.2.0](https://github.com/klueless-io/cmdlet/compare/v0.1.2...v0.2.0) (2022-07-10)
 
 
