@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/klueless-io/cmdlet/compare/v0.1.2...v0.2.0) (2022-07-10)
+
+
+### Features
+
+* add inflection cmdlets ([55bb73f](https://github.com/klueless-io/cmdlet/commit/55bb73fe3420096a1d4edd85d207529507c088db))
+
 ## [0.1.2](https://github.com/klueless-io/cmdlet/compare/v0.1.1...v0.1.2) (2022-07-10)
 
 
