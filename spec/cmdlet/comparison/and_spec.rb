@@ -2,17 +2,29 @@
 
 # And: Return true if **all of** the given values are truthy.
 RSpec.describe Cmdlet::Comparison::And do
-  let(:instance) { described_class.new }
+  let(:lhs) { nil }
+  let(:rhs) { nil }
 
-  describe 'initialize' do
-    subject { instance }
-
-    it { is_expected.not_to be_nil }
-  end
+  it { is_expected.not_to be_nil }
 
   describe '#call' do
-    it { expect(instance.call(nil)).to be_falsey }
-    it { expect(instance.call(0, 1, 2, 3)).to be_truthy }
-    it { expect(instance.call(nil, 2, 3, 3)).to be_falsey }
+    subject { described_class.new.call(lhs, rhs) }
+
+    context 'nil && nil' do
+      it { is_expected.to be_falsey }
+    end
+    context 'data && nil' do
+      let(:lhs) { 'data' }
+      it { is_expected.to be_falsey }
+    end
+    context 'nil && data' do
+      let(:rhs) { 'data' }
+      it { is_expected.to be_falsey }
+    end
+    context 'data && data' do
+      let(:lhs) { 'data' }
+      let(:rhs) { 'data' }
+      it { is_expected.to be_truthy }
+    end
   end
 end

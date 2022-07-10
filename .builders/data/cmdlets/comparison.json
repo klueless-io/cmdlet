@@ -24,6 +24,202 @@
       "ruby": "          values.all? { |value| value }\n"
     },
     {
+      "name": "default",
+      "description": "Return true if **all of** the given values are truthy.",
+      "result": "return true when every value is truthy",
+      "category": "comparison",
+      "category_description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc.",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "values",
+          "description": "one or more paramaters that may or may not contain nil",
+          "splat": "*",
+          "default": null,
+          "param_type": "Object"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          default_value = values[-1]\n\n          find_value = values[0..-2].find { |value| !value.nil? }\n\n          find_value || default_value\n"
+    },
+    {
+      "name": "eq",
+      "description": "Return true if two values are equal",
+      "result": "return truthy value if left hand side equals right hand side",
+      "category": "comparison",
+      "category_description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc.",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "lhs",
+          "description": "lhs - left hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        },
+        {
+          "name": "rhs",
+          "description": "rhs - right hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          lhs = lhs.to_s if lhs.is_a?(Symbol)\n          rhs = rhs.to_s if rhs.is_a?(Symbol)\n\n          lhs == rhs\n"
+    },
+    {
+      "name": "gt",
+      "description": "Return true if left hand side GREATER THAN right hand side",
+      "result": "truthy value if left hand side GREATER THAN right hand side",
+      "category": "comparison",
+      "category_description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc.",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "lhs",
+          "description": "lhs - left hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        },
+        {
+          "name": "rhs",
+          "description": "rhs - right hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          lhs > rhs\n"
+    },
+    {
+      "name": "gte",
+      "description": "Return true if left hand side GREATER THAN or EQUAL TO right hand side",
+      "result": "truthy value if left hand side GREATER THAN or EQUAL TO  right hand side",
+      "category": "comparison",
+      "category_description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc.",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "lhs",
+          "description": "lhs - left hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        },
+        {
+          "name": "rhs",
+          "description": "rhs - right hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          lhs >= rhs\n"
+    },
+    {
+      "name": "lt",
+      "description": "Return true if left hand side LESS THAN right hand side",
+      "result": "truthy value if left hand side LESS THAN right hand side",
+      "category": "comparison",
+      "category_description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc.",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "lhs",
+          "description": "lhs - left hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        },
+        {
+          "name": "rhs",
+          "description": "rhs - right hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          lhs < rhs\n"
+    },
+    {
+      "name": "lte",
+      "description": "Return true if left hand side LESS THAN or EQUAL TO right hand side",
+      "result": "truthy value if left hand side LESS THAN or EQUAL TO  right hand side",
+      "category": "comparison",
+      "category_description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc.",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "lhs",
+          "description": "lhs - left hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        },
+        {
+          "name": "rhs",
+          "description": "rhs - right hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          lhs <= rhs\n"
+    },
+    {
+      "name": "ne",
+      "description": "Return true if left hand side is NOT equal to right hand side",
+      "result": "truthy value if left hand side is NOT equal to right hand side",
+      "category": "comparison",
+      "category_description": "Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc.",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "lhs",
+          "description": "lhs - left hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        },
+        {
+          "name": "rhs",
+          "description": "rhs - right hand side value",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          lhs = lhs.to_s if lhs.is_a?(Symbol)\n          rhs = rhs.to_s if rhs.is_a?(Symbol)\n\n          lhs != rhs\n"
+    },
+    {
       "name": "or",
       "description": "Return true if any value is truthy.",
       "result": "return true when first value is truthy",
