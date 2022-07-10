@@ -11,7 +11,7 @@ module Cmdlet
     # all sorts of case formatted strings can be
     # represented in a consistent fashion
     def tokenizer
-      @_tokenizer ||= Funcky.configuration.tokenizer
+      @_tokenizer ||= KConfig.configuration.cmdlet.tokenizer
     end
   end
 end

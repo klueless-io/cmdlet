@@ -1,0 +1,313 @@
+{
+  "category_key": "case",
+  "cmdlets": [
+    {
+      "name": "back_slash",
+      "description": "Convert to back slash notation",
+      "result": "value converted to back_slash case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value, preserve_case: true, separator: '\\\\')\n"
+    },
+    {
+      "name": "camel",
+      "description": "Camel case the characters in the given 'string'",
+      "result": "value converted to camel case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value).underscore.camelize\n"
+    },
+    {
+      "name": "constant",
+      "description": "Constant case the characters in the given 'string'",
+      "result": "value converted to constant case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value, separator: '_').upcase\n"
+    },
+    {
+      "name": "dash",
+      "description": "Dash case the characters in the given 'string'",
+      "result": "value converted to dash case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value)\n"
+    },
+    {
+      "name": "dot",
+      "description": "Dot case the characters in the given 'string'",
+      "result": "value converted to dot case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value, separator: '.')\n"
+    },
+    {
+      "name": "double_colon",
+      "description": "Double colon case the characters in the given 'string'",
+      "result": "value converted to double_colon case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value, preserve_case: true, separator: '::')\n"
+    },
+    {
+      "name": "human",
+      "description": "Human case the characters in the given 'string'",
+      "result": "value converted to human case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value,\n            separator: ' ',\n            preserve_case: true,\n            compress_prefix_numerals: false,\n            compress_suffix_numerals: false).humanize\n"
+    },
+    {
+      "name": "lamel",
+      "description": "Lower camel case the characters in the given 'string'",
+      "result": "value converted to lower camel case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value, separator: '_').camelize(:lower)\n"
+    },
+    {
+      "name": "lower",
+      "description": "Lower case the characters in the given 'string'",
+      "result": "value converted to lower case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '' if value.nil?\n\n          value.downcase\n"
+    },
+    {
+      "name": "sentence",
+      "description": "Sentence case the characters in the given 'string'",
+      "result": "value converted to sentence case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value,\n            separator: ' ',\n            preserve_case: true,\n            compress_prefix_numerals: false,\n            compress_suffix_numerals: false).titleize\n"
+    },
+    {
+      "name": "slash",
+      "description": "Slash case the characters in the given 'string'",
+      "result": "value converted to slash case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value, preserve_case: true, separator: '/')\n"
+    },
+    {
+      "name": "snake",
+      "description": "Snake case the characters in the given 'string'",
+      "result": "value converted to snake case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          tokenizer.parse(value, separator: '_', forced_separator: true)\n"
+    },
+    {
+      "name": "title",
+      "description": "Title case the characters in the given 'string'",
+      "result": "value converted to title case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "        tokenizer.parse(value,\n          separator: ' ',\n          preserve_case: true,\n          compress_prefix_numerals: false,\n          compress_suffix_numerals: false)\n        .titleize\n"
+    },
+    {
+      "name": "upper",
+      "description": "Upper case the characters in the given 'string'",
+      "result": "value converted to upper case",
+      "category": "case",
+      "category_description": "Tokenize and apply case and/or separator",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value - to be converted",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '' if value.nil?\n\n          value.upcase\n"
+    }
+  ]
+}
