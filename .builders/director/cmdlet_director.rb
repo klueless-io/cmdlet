@@ -31,12 +31,13 @@ class CmdletDirector < KDirector::Directors::BaseDirector
   def build_cmdlets
     builder.cmdlets.each do |cmdlet|
       cmdlet_file = "#{cmdlet[:category]}/#{cmdlet[:name]}.rb"
+      cmdlet_spec_file = "#{cmdlet[:category]}/#{cmdlet[:name]}_spec.rb"
 
       cd(:lib)
       add(cmdlet_file, template_file: 'cmdlet.rb', cmdlet: cmdlet)
 
       cd(:spec)
-      add("#{cmdlet[:category]}/#{cmdlet[:name]}_spec.rb", template_file: 'cmdlet_spec.rb', cmdlet: cmdlet)
+      add(cmdlet_spec_file, template_file: 'cmdlet_spec.rb', cmdlet: cmdlet, on_exist: :skip)
     end
 
     self

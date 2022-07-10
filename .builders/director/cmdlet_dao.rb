@@ -7,10 +7,6 @@ class CmdletDao
     @k_builder = k_builder
   end
 
-  def file_path
-    # 
-  end
-
   def all_cmdlets
     data_access
       .category

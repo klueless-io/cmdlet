@@ -10,7 +10,7 @@ module Cmdlet
       # @param [String] separator - separator between values, defaults to comma
       # @return [String]
       def call(values, separator = ',')
-        return '' if values.nil? || !values.is_a?(Array)
+        return false if values.nil? || values.length.zero?
 
         values = values.reject(&:blank?)
         return '' if values.length.zero?

@@ -13,7 +13,7 @@ KManager.action :array_commands do
         parameter             :separator, 'separator between values, defaults to comma', default: "','"
 
         ruby <<-RUBY
-          return '' if values.nil? || !values.is_a?(Array)
+          return false if values.nil? || values.length == 0
           values = values.reject(&:blank?)
           return '' if values.length.zero?
 
@@ -28,7 +28,7 @@ KManager.action :array_commands do
         parameter             :separator, 'separator between values, defaults to comma', default: "','"
 
         ruby <<-'RUBY'
-          return '' if values.nil? || !values.is_a?(Array)
+          return false if values.nil? || values.length == 0
           values = values.reject(&:blank?)
           return '' if values.length.zero?
 
@@ -43,7 +43,7 @@ KManager.action :array_commands do
         parameter             :separator, 'separator between values, defaults to comma', default: "','"
 
         ruby <<-'RUBY'
-          return '' if values.nil? || !values.is_a?(Array)
+          return false if values.nil? || values.length == 0
           values = values.reject(&:blank?)
           return '' if values.length.zero?
 

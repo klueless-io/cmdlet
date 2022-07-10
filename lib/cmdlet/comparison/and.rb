@@ -9,6 +9,8 @@ module Cmdlet
       # @param [Object] values - list of values (via *splat) to be checked via AND condition
       # @return [String] return true when every value is truthy
       def call(*values)
+        return false if values.nil? || values.length.zero?
+
         values.all? { |value| value }
       end
     end

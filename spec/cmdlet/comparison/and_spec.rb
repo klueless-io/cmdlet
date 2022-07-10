@@ -11,12 +11,24 @@ RSpec.describe Cmdlet::Comparison::And do
   end
 
   describe '#call' do
-    subject { instance.call(value) }
+    subject { instance.call(*values) }
 
-    let(:value) { nil }
+    context 'handle nil' do
+      let(:values) { nil }
 
-    # context 'safely handle nil' do
-    #   it { is_expected.to eq('') }
-    # end
+      it { is_expected.to be_falsey }
+    end
+
+    context 'all values are truthy' do
+      let(:values) { [0, 1, 2] }
+
+      it { is_expected.to be_truthy }
+    end
+
+    context 'some values are truthy' do
+      let(:values) { [nil, 1, 2] }
+
+      it { is_expected.to be_falsey }
+    end
   end
 end

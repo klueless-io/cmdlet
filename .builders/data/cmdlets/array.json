@@ -13,14 +13,14 @@
         {
           "name": "values",
           "description": "array of values to join",
-          "splat": false,
+          "splat": null,
           "default": null,
           "param_type": "String|Int"
         },
         {
           "name": "separator",
           "description": "separator between values, defaults to comma",
-          "splat": false,
+          "splat": null,
           "default": "','",
           "param_type": "String"
         }
@@ -28,7 +28,7 @@
       "examples": [
 
       ],
-      "ruby": "          return '' if values.nil? || !values.is_a?(Array)\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          values.join(separator)\n"
+      "ruby": "          return false if values.nil? || values.length == 0\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          values.join(separator)\n"
     },
     {
       "name": "join_pre",
@@ -42,14 +42,14 @@
         {
           "name": "values",
           "description": "array of values to join",
-          "splat": false,
+          "splat": null,
           "default": null,
           "param_type": "String|Int"
         },
         {
           "name": "separator",
           "description": "separator between values, defaults to comma",
-          "splat": false,
+          "splat": null,
           "default": "','",
           "param_type": "String"
         }
@@ -57,7 +57,7 @@
       "examples": [
 
       ],
-      "ruby": "          return '' if values.nil? || !values.is_a?(Array)\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          \"#{separator}#{values.join(separator)}\"\n"
+      "ruby": "          return false if values.nil? || values.length == 0\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          \"#{separator}#{values.join(separator)}\"\n"
     },
     {
       "name": "join_pre",
@@ -71,14 +71,14 @@
         {
           "name": "values",
           "description": "array of values to join",
-          "splat": false,
+          "splat": null,
           "default": null,
           "param_type": "String|Int"
         },
         {
           "name": "separator",
           "description": "separator between values, defaults to comma",
-          "splat": false,
+          "splat": null,
           "default": "','",
           "param_type": "String"
         }
@@ -86,7 +86,7 @@
       "examples": [
 
       ],
-      "ruby": "          return '' if values.nil? || !values.is_a?(Array)\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          \"#{separator}#{values.join(separator)}\"\n"
+      "ruby": "          return false if values.nil? || values.length == 0\n          values = values.reject(&:blank?)\n          return '' if values.length.zero?\n\n          \"#{separator}#{values.join(separator)}\"\n"
     },
     {
       "name": "join_post",
@@ -100,14 +100,14 @@
         {
           "name": "values",
           "description": "array of values to join",
-          "splat": false,
+          "splat": null,
           "default": null,
           "param_type": "String|Int"
         },
         {
           "name": "separator",
           "description": "separator between values, defaults to comma",
-          "splat": false,
+          "splat": null,
           "default": "','",
           "param_type": "String"
         }
