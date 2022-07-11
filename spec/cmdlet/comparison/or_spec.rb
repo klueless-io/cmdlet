@@ -2,17 +2,27 @@
 
 # Or: Return true if any value is truthy.
 RSpec.describe Cmdlet::Comparison::Or do
-  let(:instance) { described_class.new }
+  subject { described_class.new.call(lhs, rhs) }
 
-  describe 'initialize' do
-    subject { instance }
-
-    it { is_expected.not_to be_nil }
-  end
+  let(:lhs) { nil }
+  let(:rhs) { nil }
 
   describe '#call' do
-    it { expect(instance.call(nil)).to be_falsey }
-    it { expect(instance.call(nil, nil)).to be_falsey }
-    it { expect(instance.call(nil, 1, nil)).to be_truthy }
+    context 'nil || nil' do
+      it { is_expected.to be_falsey }
+    end
+    context 'data || nil' do
+      let(:lhs) { 'data' }
+      it { is_expected.to be_truthy }
+    end
+    context 'nil || data' do
+      let(:rhs) { 'data' }
+      it { is_expected.to be_truthy }
+    end
+    context 'data || data' do
+      let(:lhs) { 'data' }
+      let(:rhs) { 'data' }
+      it { is_expected.to be_truthy }
+    end
   end
 end

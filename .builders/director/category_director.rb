@@ -31,7 +31,12 @@ class CategoryDirector < KDirector::Directors::BaseDirector
   def generate_require_all_cmdlets
     cd(:lib)
     add('_.rb',
-      template_file: 'require_all_cmdlets.rb',
+      template_file: 'cmdlets_require_all.rb',
+      cmdlets: data_access.cmdlet.all_cmdlets)
+
+    cd(:handlebars_lib)
+    add('_.rb', 
+      template_file: 'handlebars_helper_require_all.rb',
       cmdlets: data_access.cmdlet.all_cmdlets)
 
   end

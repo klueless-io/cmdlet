@@ -11,7 +11,7 @@ KManager.action :comparison_commands do
 
         parameter             :values, 'list of values (via *splat) to be checked via AND condition', splat: '*', param_type: 'Object'
 
-        ruby <<-RUBY
+        ruby <<-RUBY 
           values.all? { |value| value }
         RUBY
       end
