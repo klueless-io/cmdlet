@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/klueless-io/cmdlet/compare/v0.2.1...v0.3.0) (2022-07-11)
+
+
+### Features
+
+* update handlebars templates ([599246d](https://github.com/klueless-io/cmdlet/commit/599246d9521381106524c263ccc1c157f093389d))
+
 ## [0.2.1](https://github.com/klueless-io/cmdlet/compare/v0.2.0...v0.2.1) (2022-07-10)
 
 
