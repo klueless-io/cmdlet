@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/klueless-io/cmdlet/compare/v0.4.0...v0.4.1) (2022-07-12)
+
+
+### Bug Fixes
+
+* add spec for singularlize ([ae1fc2d](https://github.com/klueless-io/cmdlet/commit/ae1fc2d144caa3ed1eda94fb7e4ee5520c12eaa8))
+
 # [0.4.0](https://github.com/klueless-io/cmdlet/compare/v0.3.0...v0.4.0) (2022-07-12)
 
 
