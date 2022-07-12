@@ -73,6 +73,22 @@ KManager.action :inflection_commands do
         RUBY
       end
       .cmdlet do
+        name :pluralize_number_word
+        description           'Returns the plural form of the word based on a count with the count prefixed in the format "3 categories"'
+        result                'value and number are used to calculate plural/singular form'
+
+        parameter             :value, 'value - value to pluralize', param_type: 'String'
+        parameter             :count, 'count used to determine pluralization', param_type: 'Int'
+
+        ruby <<-'RUBY'
+          return '' if value.nil?
+
+          count = count.to_i if count.is_a? String
+
+          "#{count} #{value.pluralize(count)}"
+        RUBY
+      end
+      .cmdlet do
         name :singularize
         description           'The reverse of #pluralize, returns the singular form of a word in a string'
         result                'plural value turned to singular value'
