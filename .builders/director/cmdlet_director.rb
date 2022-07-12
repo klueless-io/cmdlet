@@ -56,6 +56,10 @@ class CmdletDirector < KDirector::Directors::BaseDirector
       k_builder.run_cop('**/*.rb', fix_unsafe: true)
     end
 
+    Dir.chdir(k_builder.target_folders.get(:handlebars)) do
+      k_builder.run_cop('**/*.rb', fix_unsafe: true)
+    end
+
     self
   end
 

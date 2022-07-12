@@ -200,28 +200,6 @@
       "ruby": "          return '' if value.nil?\n\n          value.downcase\n"
     },
     {
-      "name": "sentence",
-      "description": "Sentence case the characters in the given 'string'",
-      "result": "value converted to sentence case",
-      "category": "case",
-      "category_description": "Tokenize and apply case and/or separator",
-      "base_class_require": null,
-      "base_class": null,
-      "parameters": [
-        {
-          "name": "value",
-          "description": "value - to be converted",
-          "splat": null,
-          "default": null,
-          "param_type": "String|Int"
-        }
-      ],
-      "examples": [
-
-      ],
-      "ruby": "          tokenizer.parse(value,\n            separator: ' ',\n            preserve_case: true,\n            compress_prefix_numerals: false,\n            compress_suffix_numerals: false).titleize\n"
-    },
-    {
       "name": "slash",
       "description": "Slash case the characters in the given 'string'",
       "result": "value converted to slash case",

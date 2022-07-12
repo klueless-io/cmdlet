@@ -110,21 +110,6 @@ KManager.action :case_commands do
         RUBY
       end
       .cmdlet do
-        name :sentence
-        description           "Sentence case the characters in the given 'string'"
-        result                'value converted to sentence case'
-
-        parameter             :value, 'value - to be converted', param_type: 'String|Int'
-
-        ruby <<-'RUBY'
-          tokenizer.parse(value,
-            separator: ' ',
-            preserve_case: true,
-            compress_prefix_numerals: false,
-            compress_suffix_numerals: false).titleize
-        RUBY
-      end
-      .cmdlet do
         name :slash
         description           "Slash case the characters in the given 'string'"
         result                'value converted to slash case'
