@@ -50,26 +50,19 @@ KManager.action :inflection_commands do
         RUBY
       end
       .cmdlet do
-        name :pluralize_by_number
-        description           'Returns the plural form of the word based on a count'
+        name :pluralize_number
+        description           'Returns the plural form of the word based on a count in the format "categories"'
         result                'value and number are used to calculate plural/singular form'
 
         parameter             :value, 'value - value to pluralize', param_type: 'String'
         parameter             :count, 'count used to determine pluralization', param_type: 'Int'
-        parameter             :format, '(Optional) what format should output be. :word, :number_word'
-
+        
         ruby <<-'RUBY'
           return '' if value.nil?
 
           count = count.to_i if count.is_a? String
-          format = :word if format.nil?
 
-          case format.to_sym
-          when :number_word, :number_and_word
-            "#{count} #{value.pluralize(count)}"
-          else # aka :word
-            value.pluralize(count)
-          end
+          value.pluralize(count)
         RUBY
       end
       .cmdlet do

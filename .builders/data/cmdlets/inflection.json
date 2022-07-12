@@ -68,8 +68,8 @@
       "ruby": "          return '' if value.nil?\n\n          value = value.to_s if value.is_a?(Symbol)\n\n          value.pluralize\n"
     },
     {
-      "name": "pluralize_by_number",
-      "description": "Returns the plural form of the word based on a count",
+      "name": "pluralize_number",
+      "description": "Returns the plural form of the word based on a count in the format \"categories\"",
       "result": "value and number are used to calculate plural/singular form",
       "category": "inflection",
       "category_description": "Inflection handling routines, eg. pluralize, singular, ordinalize",
@@ -89,19 +89,12 @@
           "splat": null,
           "default": null,
           "param_type": "Int"
-        },
-        {
-          "name": "format",
-          "description": "(Optional) what format should output be. :word, :number_word",
-          "splat": null,
-          "default": null,
-          "param_type": "String"
         }
       ],
       "examples": [
 
       ],
-      "ruby": "          return '' if value.nil?\n\n          count = count.to_i if count.is_a? String\n          format = :word if format.nil?\n\n          case format.to_sym\n          when :number_word, :number_and_word\n            \"#{count} #{value.pluralize(count)}\"\n          else # aka :word\n            value.pluralize(count)\n          end\n"
+      "ruby": "          return '' if value.nil?\n\n          count = count.to_i if count.is_a? String\n\n          value.pluralize(count)\n"
     },
     {
       "name": "pluralize_number_word",
