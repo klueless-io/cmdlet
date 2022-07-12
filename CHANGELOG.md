@@ -1,3 +1,10 @@
+## [0.4.2](https://github.com/klueless-io/cmdlet/compare/v0.4.1...v0.4.2) (2022-07-12)
+
+
+### Bug Fixes
+
+* add inflection: pluralize_number and pluralize_number_word ([a97bbe1](https://github.com/klueless-io/cmdlet/commit/a97bbe1a7960d1dfc26ee37dbf93804ba571fe0d))
+
 ## [0.4.1](https://github.com/klueless-io/cmdlet/compare/v0.4.0...v0.4.1) (2022-07-12)
 
 
