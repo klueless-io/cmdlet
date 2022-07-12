@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/klueless-io/cmdlet/compare/v0.3.0...v0.4.0) (2022-07-12)
+
+
+### Features
+
+* remove sentence ([20961b8](https://github.com/klueless-io/cmdlet/commit/20961b89efae5f9738e24959010318eb284e2af4))
+
 # [0.3.0](https://github.com/klueless-io/cmdlet/compare/v0.2.1...v0.3.0) (2022-07-11)
 
 
