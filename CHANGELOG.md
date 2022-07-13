@@ -1,3 +1,10 @@
+# [0.6.0](https://github.com/klueless-io/cmdlet/compare/v0.5.0...v0.6.0) (2022-07-13)
+
+
+### Features
+
+* align cmdlet/helper GEM versions ([3fcf532](https://github.com/klueless-io/cmdlet/commit/3fcf532686d646492095cbb31ab08a9213b283b9))
+
 # [0.5.0](https://github.com/klueless-io/cmdlet/compare/v0.4.2...v0.5.0) (2022-07-12)
 
 
