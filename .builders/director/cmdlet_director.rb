@@ -54,7 +54,7 @@ class CmdletDirector < KDirector::Directors::BaseDirector
       category = builder.cmdlets.first[:category]
       handlebars_category_configuration_file = "handlebarsjs/helpers/#{category}/default_configuration.rb"
 
-      oadd(handlebars_category_configuration_file, template_file: 'handlebars_helper_default_configuration.rb', cmdlets: builder.cmdlets)
+      add(handlebars_category_configuration_file, template_file: 'handlebars_helper_default_configuration.rb', cmdlets: builder.cmdlets)
     end
 
 
