@@ -1,3 +1,10 @@
+## [0.6.2](https://github.com/klueless-io/cmdlet/compare/v0.6.1...v0.6.2) (2022-07-13)
+
+
+### Bug Fixes
+
+* remove alias :parse, :call ([375deb4](https://github.com/klueless-io/cmdlet/commit/375deb4a69f40e56265abaed9b52dd552e7235ef))
+
 ## [0.6.1](https://github.com/klueless-io/cmdlet/compare/v0.6.0...v0.6.1) (2022-07-13)
 
 
