@@ -36,21 +36,6 @@ KManager.action :array_commands do
         RUBY
       end
       .cmdlet do
-        name :join_pre
-        description           'join an array of values with separator as a string and using the separator at the beginning of string'
-
-        parameter             :values, 'array of values to join', param_type: 'String|Int'
-        parameter             :separator, 'separator between values, defaults to comma', default: "','"
-
-        ruby <<-'RUBY'
-          return '' if values.nil? || !values.is_a?(::Array)
-          values = values.reject(&:blank?)
-          return '' if values.length.zero?
-
-          "#{separator}#{values.join(separator)}"
-        RUBY
-      end
-      .cmdlet do
         name :join_post
         description           'join an array of values with separator as a string and using the separator at the end of string'
 
