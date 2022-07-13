@@ -6,8 +6,7 @@ module Cmdlet
     def call(value)
       value
     end
-    alias :parse :call
-
+    alias parse call
 
     # String tokenizer will clean up a string so that
     # all sorts of case formatted strings can be
