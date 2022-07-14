@@ -51,6 +51,6 @@ KManager.action :array_commands do
         RUBY
       end
       .generate
-      .debug
+      # .debug
   end
 end
