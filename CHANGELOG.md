@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/klueless-io/cmdlet/compare/v0.6.2...v0.7.0) (2022-07-14)
+
+
+### Features
+
+* bump activesupport gem version ([4833f48](https://github.com/klueless-io/cmdlet/commit/4833f484411a3c308b1682489c591f45d88bee88))
+
 ## [0.6.2](https://github.com/klueless-io/cmdlet/compare/v0.6.1...v0.6.2) (2022-07-13)
 
 
