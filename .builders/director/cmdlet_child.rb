@@ -11,6 +11,10 @@ class CmdletChild < KDirector::Directors::ChildDirector
     builder.cmdlet_setting(:name, value)
   end
 
+  def aliases(value)
+    builder.cmdlet_setting(:aliases, value)
+  end
+
   def description(value)
     builder.cmdlet_setting(:description, value)
   end

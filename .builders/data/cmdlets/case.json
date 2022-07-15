@@ -3,6 +3,13 @@
   "cmdlets": [
     {
       "name": "back_slash",
+      "aliases": [
+        "backward_slash",
+        "slash_backward"
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Convert to back slash notation",
       "result": "value converted to back_slash case",
       "category": "case",
@@ -25,6 +32,15 @@
     },
     {
       "name": "camel",
+      "aliases": [
+        "camel_upper",
+        "camelUpper",
+        "camelU",
+        "pascalcase"
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Camel case the characters in the given 'string'",
       "result": "value converted to camel case",
       "category": "case",
@@ -47,6 +63,12 @@
     },
     {
       "name": "constant",
+      "aliases": [
+        "constantize"
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Constant case the characters in the given 'string'",
       "result": "value converted to constant case",
       "category": "case",
@@ -69,6 +91,15 @@
     },
     {
       "name": "dash",
+      "aliases": [
+        "dasherize",
+        "dashify",
+        "dashcase",
+        "hyphenate"
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Dash case the characters in the given 'string'",
       "result": "value converted to dash case",
       "category": "case",
@@ -91,6 +122,15 @@
     },
     {
       "name": "dot",
+      "aliases": [
+        "dotirize",
+        "dotify",
+        "dotcase",
+        "hyphenate"
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Dot case the characters in the given 'string'",
       "result": "value converted to dot case",
       "category": "case",
@@ -113,6 +153,12 @@
     },
     {
       "name": "double_colon",
+      "aliases": [
+
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Double colon case the characters in the given 'string'",
       "result": "value converted to double_colon case",
       "category": "case",
@@ -135,6 +181,13 @@
     },
     {
       "name": "human",
+      "aliases": [
+        "humanize",
+        "sentence"
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Human case the characters in the given 'string'",
       "result": "value converted to human case",
       "category": "case",
@@ -157,6 +210,14 @@
     },
     {
       "name": "lamel",
+      "aliases": [
+        "camel_lower",
+        "camelLower",
+        "camelL"
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Lower camel case the characters in the given 'string'",
       "result": "value converted to lower camel case",
       "category": "case",
@@ -179,6 +240,13 @@
     },
     {
       "name": "lower",
+      "aliases": [
+        "lowercase",
+        "downcase"
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Lower case the characters in the given 'string'",
       "result": "value converted to lower case",
       "category": "case",
@@ -201,6 +269,13 @@
     },
     {
       "name": "slash",
+      "aliases": [
+        "forward_slash",
+        "slash_forward"
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Slash case the characters in the given 'string'",
       "result": "value converted to slash case",
       "category": "case",
@@ -223,6 +298,12 @@
     },
     {
       "name": "snake",
+      "aliases": [
+
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Snake case the characters in the given 'string'",
       "result": "value converted to snake case",
       "category": "case",
@@ -245,6 +326,12 @@
     },
     {
       "name": "title",
+      "aliases": [
+
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Title case the characters in the given 'string'",
       "result": "value converted to title case",
       "category": "case",
@@ -267,6 +354,13 @@
     },
     {
       "name": "upper",
+      "aliases": [
+        "upcase",
+        "uppercase"
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "Upper case the characters in the given 'string'",
       "result": "value converted to upper case",
       "category": "case",

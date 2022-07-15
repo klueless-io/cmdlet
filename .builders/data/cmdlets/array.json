@@ -3,6 +3,12 @@
   "cmdlets": [
     {
       "name": "join",
+      "aliases": [
+
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "join an array of values with separator as a string",
       "result": "new String formed by joining the array elements with seperator",
       "category": "array",
@@ -32,6 +38,12 @@
     },
     {
       "name": "join_pre",
+      "aliases": [
+
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "join an array of values with separator as a string and using the separator at the beginning of string",
       "result": null,
       "category": "array",
@@ -61,6 +73,12 @@
     },
     {
       "name": "join_post",
+      "aliases": [
+
+      ],
+      "name_and_aliases": [
+
+      ],
       "description": "join an array of values with separator as a string and using the separator at the end of string",
       "result": null,
       "category": "array",

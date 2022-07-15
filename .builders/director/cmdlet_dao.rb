@@ -16,6 +16,11 @@ class CmdletDao
       .sort_by { |r| [r[:category], r[:name]] }
   end
 
+  def all_cmdlets_by_category
+    grouped_categories = all_cmdlets.group_by { |cmdlet| cmdlet[:category] }
+    grouped_categories.keys.map { |category_key| { category: category_key, cmdlets: grouped_categories[category_key] } }
+  end
+
   private
 
   def read_cmdlets(category_name)

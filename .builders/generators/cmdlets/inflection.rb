@@ -36,6 +36,7 @@ KManager.action :inflection_commands do
       end
       .cmdlet do
         name :pluralize
+        aliases               %i[plural]
         description           'Returns the plural form of the word in the string'
         result                'value in plural form'
 
@@ -83,6 +84,7 @@ KManager.action :inflection_commands do
       end
       .cmdlet do
         name :singularize
+        aliases               %i[singular]
         description           'The reverse of #pluralize, returns the singular form of a word in a string'
         result                'plural value turned to singular value'
 

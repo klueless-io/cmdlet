@@ -11,6 +11,7 @@ class CategoryDirector < KDirector::Directors::BaseDirector
 
   def generate
     generate_require_all_cmdlets
+    run_cop
 
     self
   end
@@ -39,6 +40,22 @@ class CategoryDirector < KDirector::Directors::BaseDirector
       template_file: 'handlebars_helper_require_all.rb',
       cmdlets: data_access.cmdlet.all_cmdlets)
 
+    add('handlebarsjs/handlebars_configuration_defaults.rb',
+      template_file: 'handlebars_helper_configuration_defaults.rb',
+      cmdlet_categories: data_access.cmdlet.all_cmdlets_by_category)
   end
-  
+
+  def run_cop
+    Dir.chdir(k_builder.target_folders.get(:lib)) do
+      k_builder.run_cop('**/*.rb', fix_unsafe: true)
+    end
+
+    Dir.chdir(k_builder.target_folders.get(:handlebars_lib)) do
+      k_builder.run_cop('**/*.rb', fix_unsafe: true)
+    end
+
+    self
+  end
+
+
 end

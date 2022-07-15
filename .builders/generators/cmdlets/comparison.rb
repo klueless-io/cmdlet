@@ -6,6 +6,7 @@ KManager.action :comparison_commands do
       .init(k_builder, category: :comparison)
       .cmdlet do
         name :and
+        aliases               %i[all]
         description           'Return true if **all of** the given values are truthy.'
         result                'return true when every value is truthy'
 
@@ -33,6 +34,7 @@ KManager.action :comparison_commands do
       end
       .cmdlet do
         name :eq
+        aliases               %i[equal]
         description           'Return true if two values are equal'
         result                'return truthy value if left hand side equals right hand side'
 
@@ -48,6 +50,7 @@ KManager.action :comparison_commands do
       end
       .cmdlet do
         name :gt
+        aliases               %i[greater_than]
         description           'Return true if left hand side GREATER THAN right hand side'
         result                'truthy value if left hand side GREATER THAN right hand side'
 
@@ -60,6 +63,7 @@ KManager.action :comparison_commands do
       end
       .cmdlet do
         name :gte
+        aliases               %i[greater_than_or_equal_to]
         description           'Return true if left hand side GREATER THAN or EQUAL TO right hand side'
         result                'truthy value if left hand side GREATER THAN or EQUAL TO  right hand side'
 
@@ -72,6 +76,7 @@ KManager.action :comparison_commands do
       end
       .cmdlet do
         name :lt
+        aliases               %i[less_than]
         description           'Return true if left hand side LESS THAN right hand side'
         result                'truthy value if left hand side LESS THAN right hand side'
 
@@ -84,6 +89,7 @@ KManager.action :comparison_commands do
       end
       .cmdlet do
         name :lte
+        aliases               %i[less_than_or_equal_to]
         description           'Return true if left hand side LESS THAN or EQUAL TO right hand side'
         result                'truthy value if left hand side LESS THAN or EQUAL TO  right hand side'
 
@@ -96,6 +102,7 @@ KManager.action :comparison_commands do
       end
       .cmdlet do
         name :ne
+        aliases               %i[not_equal]
         description           'Return true if left hand side is NOT equal to right hand side'
         result                'truthy value if left hand side is NOT equal to right hand side'
 
@@ -111,6 +118,7 @@ KManager.action :comparison_commands do
       end
       .cmdlet do
         name :or
+        aliases               %i[any]
         description           'Return true if any value is truthy.'
         result                'return true when first value is truthy'
 

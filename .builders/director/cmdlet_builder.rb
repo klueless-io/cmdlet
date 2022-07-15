@@ -54,6 +54,7 @@ class CmdletBuilder < KDirector::Builders::ActionsBuilder
 
     {
       name: nil,
+      aliases: [],
       description: nil,
       result: nil,
       category: category[:name],

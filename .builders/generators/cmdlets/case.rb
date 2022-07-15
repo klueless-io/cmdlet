@@ -6,6 +6,7 @@ KManager.action :case_commands do
       .init(k_builder, category: :case)
       .cmdlet do
         name :back_slash
+        aliases               %i[backward_slash slash_backward]
         description           'Convert to back slash notation'
         result                'value converted to back_slash case'
 
@@ -17,6 +18,7 @@ KManager.action :case_commands do
       end
       .cmdlet do
         name :camel
+        aliases               %i[camel_upper camelUpper camelU pascalcase]
         description           "Camel case the characters in the given 'string'"
         result                'value converted to camel case'
 
@@ -28,6 +30,7 @@ KManager.action :case_commands do
       end
       .cmdlet do
         name :constant
+        aliases               %i[constantize]
         description           "Constant case the characters in the given 'string'"
         result                'value converted to constant case'
 
@@ -39,6 +42,7 @@ KManager.action :case_commands do
       end
       .cmdlet do
         name :dash
+        aliases               %i[dasherize dashify dashcase hyphenate]
         description           "Dash case the characters in the given 'string'"
         result                'value converted to dash case'
 
@@ -50,6 +54,7 @@ KManager.action :case_commands do
       end
       .cmdlet do
         name :dot
+        aliases               %i[dotirize dotify dotcase hyphenate]
         description           "Dot case the characters in the given 'string'"
         result                'value converted to dot case'
 
@@ -72,6 +77,7 @@ KManager.action :case_commands do
       end
       .cmdlet do
         name :human
+        aliases               %i[humanize sentence]
         description           "Human case the characters in the given 'string'"
         result                'value converted to human case'
 
@@ -87,6 +93,7 @@ KManager.action :case_commands do
       end
       .cmdlet do
         name :lamel
+        aliases               %i[camel_lower camelLower camelL]
         description           "Lower camel case the characters in the given 'string'"
         result                'value converted to lower camel case'
 
@@ -98,6 +105,7 @@ KManager.action :case_commands do
       end
       .cmdlet do
         name :lower
+        aliases               %i[lowercase downcase]
         description           "Lower case the characters in the given 'string'"
         result                'value converted to lower case'
 
@@ -111,6 +119,7 @@ KManager.action :case_commands do
       end
       .cmdlet do
         name :slash
+        aliases               %i[forward_slash slash_forward]
         description           "Slash case the characters in the given 'string'"
         result                'value converted to slash case'
 
@@ -149,6 +158,7 @@ KManager.action :case_commands do
       end
       .cmdlet do
         name :upper
+        aliases               %i[upcase uppercase]
         description           "Upper case the characters in the given 'string'"
         result                'value converted to upper case'
 
