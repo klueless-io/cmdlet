@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/klueless-io/cmdlet/compare/v0.7.1...v0.8.0) (2022-07-15)
+
+
+### Features
+
+* add misc: :safe ([3a24c37](https://github.com/klueless-io/cmdlet/commit/3a24c3796b478164a4e36486d4619396a84880b9))
+
 ## [0.7.1](https://github.com/klueless-io/cmdlet/compare/v0.7.0...v0.7.1) (2022-07-15)
 
 
