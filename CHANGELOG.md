@@ -1,3 +1,10 @@
+## [0.7.1](https://github.com/klueless-io/cmdlet/compare/v0.7.0...v0.7.1) (2022-07-15)
+
+
+### Bug Fixes
+
+* add alias support ([c26a092](https://github.com/klueless-io/cmdlet/commit/c26a092d2c5fdf49ae6b1ebb017f4a6e4399a499))
+
 # [0.7.0](https://github.com/klueless-io/cmdlet/compare/v0.6.2...v0.7.0) (2022-07-14)
 
 
