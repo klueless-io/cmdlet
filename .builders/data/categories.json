@@ -1,6 +1,10 @@
 {
   "categories": [
     {
+      "name": "array",
+      "description": "Array handling routines, eg. join, join_prefix, join_post"
+    },
+    {
       "name": "case",
       "description": "Tokenize and apply case and/or separator"
     },
@@ -13,16 +17,8 @@
       "description": "Inflection handling routines, eg. pluralize, singular, ordinalize"
     },
     {
-      "name": "string",
-      "description": "String handling helpers"
-    },
-    {
-      "name": "array",
-      "description": "Array handling routines, eg. join, join_prefix, join_post"
-    },
-    {
-      "name": "transform",
-      "description": "Tokenize and apply case and/or separator"
+      "name": "misc",
+      "description": "Miscellaneous cmdlets"
     }
   ]
 }

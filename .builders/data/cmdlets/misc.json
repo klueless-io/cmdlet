@@ -1,0 +1,30 @@
+{
+  "category_key": "misc",
+  "cmdlets": [
+    {
+      "name": "safe",
+      "aliases": [
+
+      ],
+      "description": "pass through the value with <> and single and double quotes left as is",
+      "result": "the value with <> and single and double quotes left as is",
+      "category": "misc",
+      "category_description": "Miscellaneous cmdlets",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "values",
+          "description": "valure to pass throught",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Int"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          value = '' if value.nil?\n          value\n"
+    }
+  ]
+}

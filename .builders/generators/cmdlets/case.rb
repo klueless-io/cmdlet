@@ -142,6 +142,7 @@ KManager.action :case_commands do
       end
       .cmdlet do
         name :title
+        aliases               %i[titleize]
         description           "Title case the characters in the given 'string'"
         result                'value converted to title case'
 
