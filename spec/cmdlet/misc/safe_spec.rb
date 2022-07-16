@@ -2,21 +2,14 @@
 
 # Safe: pass through the value with &lt;&gt; and single and double quotes left as is
 RSpec.describe Cmdlet::Misc::Safe do
-  let(:instance) { described_class.new }
-
-  describe 'initialize' do
-    subject { instance }
-
-    it { is_expected.not_to be_nil }
-  end
-
   describe '#call' do
-    subject { instance.call(value) }
+    subject { described_class.new.call(value) }
 
-    let(:value) { nil }
+    it_behaves_like :nil_results_in_empty
 
-    context 'safely handle nil' do
-      it { is_expected.to eq('') }
+    context 'when <hello name="world" />' do
+      let(:value) { '<hello name="world" />' }
+      it { is_expected.to eq('<hello name="world" />') }
     end
   end
 end

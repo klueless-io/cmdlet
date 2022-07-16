@@ -9,7 +9,7 @@ KManager.action :misc_commands do
         description           'pass through the value with <> and single and double quotes left as is'
         result                'the value with <> and single and double quotes left as is'
 
-        parameter             :values, 'valure to pass throught', param_type: 'String|Int'
+        parameter             :value, 'value to pass through', param_type: 'String|Int'
 
         ruby <<-RUBY
           value = '' if value.nil?

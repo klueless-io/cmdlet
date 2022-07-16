@@ -6,9 +6,9 @@ module Cmdlet
     # Safe: pass through the value with &lt;&gt; and single and double quotes left as is
     class Safe < Cmdlet::BaseCmdlet
       #
-      # @param [String|Int] values - valure to pass throught
+      # @param [String|Int] value - value to pass through
       # @return [String] the value with &lt;&gt; and single and double quotes left as is
-      def call(_values)
+      def call(value)
         value = '' if value.nil?
         value
       end

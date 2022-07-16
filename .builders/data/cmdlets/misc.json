@@ -14,8 +14,8 @@
       "base_class": null,
       "parameters": [
         {
-          "name": "values",
-          "description": "valure to pass throught",
+          "name": "value",
+          "description": "value to pass through",
           "splat": null,
           "default": null,
           "param_type": "String|Int"
