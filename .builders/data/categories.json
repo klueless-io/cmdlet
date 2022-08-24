@@ -19,6 +19,10 @@
     {
       "name": "misc",
       "description": "Miscellaneous cmdlets"
+    },
+    {
+      "name": "str",
+      "description": "String manipulation"
     }
   ]
 }

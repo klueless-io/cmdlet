@@ -9,6 +9,7 @@ KManager.action :categories do
       .category(:comparison , 'Comparison helpers, eg. or, and, equal, not equal, less than, greater than etc.')
       .category(:inflection , 'Inflection handling routines, eg. pluralize, singular, ordinalize')
       .category(:misc       , 'Miscellaneous cmdlets')
+      .category(:str        , 'String manipulation')
       .save_categories
       .generate
   end

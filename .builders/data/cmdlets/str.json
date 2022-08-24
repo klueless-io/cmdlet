@@ -1,0 +1,44 @@
+{
+  "category_key": "str",
+  "cmdlets": [
+    {
+      "name": "padl",
+      "aliases": [
+
+      ],
+      "description": "pass through the value with <> and single and double quotes left as is",
+      "result": "the value with <> and single and double quotes left as is",
+      "category": "str",
+      "category_description": "String manipulation",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to apply padding to",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Symbol|Int"
+        },
+        {
+          "name": "count",
+          "description": "how much padding to apply. defaults to configuration.padl_count",
+          "splat": null,
+          "default": null,
+          "param_type": "Int"
+        },
+        {
+          "name": "char",
+          "description": "character to pad with. defaults to configuration.padl_char",
+          "splat": null,
+          "default": null,
+          "param_type": "String"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          value = '' if value.nil?\n          # count = Handlebars::Helpers.configuration.padl_count if count.nil?\n          count = 30 if count.nil?\n          count = count.to_i if count.is_a?(String)\n          # char = Handlebars::Helpers.configuration.padl_char if char.nil?\n          char = ' ' if char.nil?\n          value.to_s.rjust(count, char)\n"
+    }
+  ]
+}

@@ -22,6 +22,11 @@ module Cmdlet
 
     def initialize
       @tokenizer = Cmdlet::StringTokenizer.new
+
+      reset
+    end
+
+    def reset
       @padr_count = 30
       @padr_char = ' '
       @padl_count = 30
