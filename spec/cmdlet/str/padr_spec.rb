@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-# Padl: take the value and give it padding on the left hand side
-RSpec.describe Cmdlet::Str::Padl do
+# Padr: take the value and give it padding on the right hand side
+RSpec.describe Cmdlet::Str::Padr do
   let(:instance) { described_class.new }
 
   let(:value) { 'heading 1' }
@@ -16,7 +16,7 @@ RSpec.describe Cmdlet::Str::Padl do
     describe '#call' do
       subject { instance.call(value) }
 
-      it { is_expected.to eq('                     heading 1') }
+      it { is_expected.to eq('heading 1                     ') }
 
       context 'safely handle nil value' do
         let(:value) { nil }
@@ -27,7 +27,7 @@ RSpec.describe Cmdlet::Str::Padl do
       context 'safely handle numeric value' do
         let(:value) { 123 }
 
-        it { is_expected.to eq('                           123') }
+        it { is_expected.to eq('123                           ') }
       end
 
       context 'with additional params' do
@@ -38,19 +38,19 @@ RSpec.describe Cmdlet::Str::Padl do
         context 'with count' do
           let(:count) { 20 }
 
-          it { is_expected.to eq('           heading 1') }
+          it { is_expected.to eq('heading 1           ') }
 
           context 'and char' do
             let(:char) { '-' }
 
-            it { is_expected.to eq('-----------heading 1') }
+            it { is_expected.to eq('heading 1-----------') }
           end
         end
 
         context 'with char' do
           let(:char) { '-' }
 
-          it { is_expected.to eq('---------------------heading 1') }
+          it { is_expected.to eq('heading 1---------------------') }
         end
       end
     end
@@ -60,14 +60,14 @@ RSpec.describe Cmdlet::Str::Padl do
     subject { instance.call(value) }
 
     before do
-      KConfig.configuration.cmdlet.padl_count = 15
-      KConfig.configuration.cmdlet.padl_char = 'x'
+      KConfig.configuration.cmdlet.padr_count = 15
+      KConfig.configuration.cmdlet.padr_char = 'x'
     end
 
     after do
       KConfig.configuration.cmdlet.reset
     end
 
-    it { is_expected.to eq('xxxxxxheading 1') }
+    it { is_expected.to eq('heading 1xxxxxx') }
   end
 end

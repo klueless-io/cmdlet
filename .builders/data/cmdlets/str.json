@@ -6,8 +6,8 @@
       "aliases": [
 
       ],
-      "description": "pass through the value with <> and single and double quotes left as is",
-      "result": "the value with <> and single and double quotes left as is",
+      "description": "take the value and give it padding on the left hand side",
+      "result": "the value padded on LHS with [char (default ' ')] and [count (default 30)]",
       "category": "str",
       "category_description": "String manipulation",
       "base_class_require": null,
@@ -24,21 +24,60 @@
           "name": "count",
           "description": "how much padding to apply. defaults to configuration.padl_count",
           "splat": null,
-          "default": null,
+          "default": "nil",
           "param_type": "Int"
         },
         {
           "name": "char",
           "description": "character to pad with. defaults to configuration.padl_char",
           "splat": null,
-          "default": null,
+          "default": "nil",
           "param_type": "String"
         }
       ],
       "examples": [
 
       ],
-      "ruby": "          value = '' if value.nil?\n          # count = Handlebars::Helpers.configuration.padl_count if count.nil?\n          count = 30 if count.nil?\n          count = count.to_i if count.is_a?(String)\n          # char = Handlebars::Helpers.configuration.padl_char if char.nil?\n          char = ' ' if char.nil?\n          value.to_s.rjust(count, char)\n"
+      "ruby": "        value = '' if value.nil?\n        count = KConfig.configuration.cmdlet.padl_count if count.nil?\n        count = count.to_i if count.is_a?(String)\n        char = KConfig.configuration.cmdlet.padl_char if char.nil?\n        value.to_s.rjust(count, char)\n"
+    },
+    {
+      "name": "padr",
+      "aliases": [
+
+      ],
+      "description": "take the value and give it padding on the right hand side",
+      "result": "the value padded on RHS with [char (default ' ')] and [count (default 30)]",
+      "category": "str",
+      "category_description": "String manipulation",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "value to apply padding to",
+          "splat": null,
+          "default": null,
+          "param_type": "String|Symbol|Int"
+        },
+        {
+          "name": "count",
+          "description": "how much padding to apply. defaults to configuration.padr_count",
+          "splat": null,
+          "default": "nil",
+          "param_type": "Int"
+        },
+        {
+          "name": "char",
+          "description": "character to pad with. defaults to configuration.padr_char",
+          "splat": null,
+          "default": "nil",
+          "param_type": "String"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "        value = '' if value.nil?\n        count = KConfig.configuration.cmdlet.padr_count if count.nil?\n        count = count.to_i if count.is_a?(String)\n        char = KConfig.configuration.cmdlet.padr_char if char.nil?\n        value.to_s.ljust(count, char)\n"
     }
   ]
 }
