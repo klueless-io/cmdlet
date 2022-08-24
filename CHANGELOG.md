@@ -1,3 +1,10 @@
+## [0.9.2](https://github.com/klueless-io/cmdlet/compare/v0.9.1...v0.9.2) (2022-08-24)
+
+
+### Bug Fixes
+
+* add reset to cmdlet configuration ([72a14a8](https://github.com/klueless-io/cmdlet/commit/72a14a843e08015425c8f2fba44b4a8ccd175a85))
+
 ## [0.9.1](https://github.com/klueless-io/cmdlet/compare/v0.9.0...v0.9.1) (2022-08-24)
 
 
