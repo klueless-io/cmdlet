@@ -1,3 +1,10 @@
+# [0.10.0](https://github.com/klueless-io/cmdlet/compare/v0.9.2...v0.10.0) (2022-08-24)
+
+
+### Features
+
+* add str: :padl and str: padr ([8db11eb](https://github.com/klueless-io/cmdlet/commit/8db11eb2922b310bf945ff1e154f506489bba32a))
+
 ## [0.9.2](https://github.com/klueless-io/cmdlet/compare/v0.9.1...v0.9.2) (2022-08-24)
 
 
