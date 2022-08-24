@@ -1,3 +1,10 @@
+## [0.9.1](https://github.com/klueless-io/cmdlet/compare/v0.9.0...v0.9.1) (2022-08-24)
+
+
+### Bug Fixes
+
+* add string category (str) and padl ([36e3487](https://github.com/klueless-io/cmdlet/commit/36e348715812792dc1d139f56027f82e0ec67f82))
+
 # [0.9.0](https://github.com/klueless-io/cmdlet/compare/v0.8.0...v0.9.0) (2022-07-16)
 
 
