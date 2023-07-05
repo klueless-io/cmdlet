@@ -41,7 +41,6 @@ Metrics/MethodLength:
 Style/ZeroLengthPredicate:
   Enabled: false
 
-
 Layout/LineLength:
   Max: 200
   # Ignores annotate output
