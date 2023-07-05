@@ -1,3 +1,10 @@
+## [0.10.1](https://github.com/klueless-io/cmdlet/compare/v0.10.0...v0.10.1) (2023-07-05)
+
+
+### Bug Fixes
+
+* update invalid spec ([c930cc2](https://github.com/klueless-io/cmdlet/commit/c930cc2549b7c355f6ca8e4007c955ea2126e023))
+
 # [0.10.0](https://github.com/klueless-io/cmdlet/compare/v0.9.2...v0.10.0) (2022-08-24)
 
 
