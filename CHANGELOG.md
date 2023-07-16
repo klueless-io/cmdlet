@@ -1,3 +1,10 @@
+# [0.11.0](https://github.com/klueless-io/cmdlet/compare/v0.10.1...v0.11.0) (2023-07-16)
+
+
+### Features
+
+* add format_json ([f5f3dd5](https://github.com/klueless-io/cmdlet/commit/f5f3dd5512cdae79f42eb389f2f5a29f655ed9e6))
+
 ## [0.10.1](https://github.com/klueless-io/cmdlet/compare/v0.10.0...v0.10.1) (2023-07-05)
 
 
