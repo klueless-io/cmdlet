@@ -16,6 +16,21 @@ KManager.action :misc_commands do
           value
         RUBY
       end
+      .cmdlet do
+        name :format_json
+        description           'FormatJson will take an object and write it out as pretty JSON'
+        result                'value as pretty JSON string'
+
+        parameter             :value, 'object to be converted to JSON string', param_type: 'Object'
+
+        ruby <<-RUBY
+          return '{}' if value.nil?
+
+          value = JSON.pretty_generate(value)
+
+          value
+        RUBY
+      end
       .generate
       # .debug
   end

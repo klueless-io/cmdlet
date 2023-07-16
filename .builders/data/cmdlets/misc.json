@@ -25,6 +25,31 @@
 
       ],
       "ruby": "          value = '' if value.nil?\n          value\n"
+    },
+    {
+      "name": "format_json",
+      "aliases": [
+
+      ],
+      "description": "FormatJson will take an object and write it out as pretty JSON",
+      "result": "value as pretty JSON string",
+      "category": "misc",
+      "category_description": "Miscellaneous cmdlets",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "object to be converted to JSON string",
+          "splat": null,
+          "default": null,
+          "param_type": "Object"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          return '{}' if value.nil?\n\n          value = JSON.pretty_generate(value)\n\n          value\n"
     }
   ]
 }
