@@ -18,5 +18,10 @@ RSpec.describe Cmdlet::Misc::Omit do
     context 'safely handle nil' do
       it { is_expected.to eq('') }
     end
+
+    context 'omit any input value' do
+      let(:value) { 'some value' }
+      it { is_expected.to eq('') }
+    end
   end
 end
