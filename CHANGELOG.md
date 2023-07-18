@@ -1,3 +1,10 @@
+## [0.12.1](https://github.com/klueless-io/cmdlet/compare/v0.12.0...v0.12.1) (2023-07-18)
+
+
+### Bug Fixes
+
+* add test ([9895bf9](https://github.com/klueless-io/cmdlet/commit/9895bf9d0a1a709307f1b427e5d18ad093f07318))
+
 # [0.12.0](https://github.com/klueless-io/cmdlet/compare/v0.11.0...v0.12.0) (2023-07-18)
 
 
