@@ -17,18 +17,6 @@ KManager.action :misc_commands do
         RUBY
       end
       .cmdlet do
-        name :omit
-        aliases               %i[ignore comment_out]
-        description           'this content will not get written out, useful for commenting out code'
-        result                'empty string'
-
-        parameter             :value, 'value to omit', param_type: 'String|Int'
-
-        ruby <<-RUBY
-          ''
-        RUBY
-      end
-      .cmdlet do
         name :makebold
         description           'Sample to bold some text'
         result                'Testing an ID'
@@ -58,3 +46,16 @@ KManager.action :misc_commands do
       # .debug
   end
 end
+
+# .cmdlet do
+#   name :omit
+#   aliases               %i[ignore comment_out]
+#   description           'this content will not get written out, useful for commenting out code'
+#   result                'empty string'
+
+#   parameter             :value, 'value to omit', param_type: 'String|Int'
+
+#   ruby <<-RUBY
+#     ''
+#   RUBY
+# end
