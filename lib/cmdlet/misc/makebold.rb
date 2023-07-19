@@ -8,8 +8,8 @@ module Cmdlet
       #
       # @param [Handlebars Block] value - block
       # @return [String] Testing an ID
-      def call(_value)
-        '<b>Testing an ID</b>'
+      def call(value)
+        "<b>#{value}</b>"
       end
     end
   end

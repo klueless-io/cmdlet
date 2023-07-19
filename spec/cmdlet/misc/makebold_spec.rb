@@ -16,7 +16,7 @@ RSpec.describe Cmdlet::Misc::Makebold do
     let(:value) { nil }
 
     context 'safely handle nil' do
-      it { is_expected.to eq('') }
+      it { is_expected.to eq('<b></b>') }
     end
   end
 end
