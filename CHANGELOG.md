@@ -1,3 +1,10 @@
+## [0.12.5](https://github.com/klueless-io/cmdlet/compare/v0.12.4...v0.12.5) (2023-07-19)
+
+
+### Bug Fixes
+
+* remove makebold test ([5523071](https://github.com/klueless-io/cmdlet/commit/5523071b15e9e998a187922cc9e98d656bdfd841))
+
 ## [0.12.4](https://github.com/klueless-io/cmdlet/compare/v0.12.3...v0.12.4) (2023-07-19)
 
 
