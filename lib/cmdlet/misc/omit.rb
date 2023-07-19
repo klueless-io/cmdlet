@@ -7,7 +7,7 @@ module Cmdlet
     class Omit < Cmdlet::BaseCmdlet
       #
       # @param [String|Int] value - value to omit
-      # @return [String] empty stting
+      # @return [String] empty string
       def call(_value)
         ''
       end

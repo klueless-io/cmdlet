@@ -33,7 +33,7 @@
         "comment_out"
       ],
       "description": "this content will not get written out, useful for commenting out code",
-      "result": "empty stting",
+      "result": "empty string",
       "category": "misc",
       "category_description": "Miscellaneous cmdlets",
       "base_class_require": null,
@@ -51,6 +51,31 @@
 
       ],
       "ruby": "          ''\n"
+    },
+    {
+      "name": "makebold",
+      "aliases": [
+
+      ],
+      "description": "Sample to bold some text",
+      "result": "Testing an ID",
+      "category": "misc",
+      "category_description": "Miscellaneous cmdlets",
+      "base_class_require": null,
+      "base_class": null,
+      "parameters": [
+        {
+          "name": "value",
+          "description": "block",
+          "splat": null,
+          "default": null,
+          "param_type": "Handlebars Block"
+        }
+      ],
+      "examples": [
+
+      ],
+      "ruby": "          \"<b>Testing an ID</b>\"\n"
     },
     {
       "name": "format_json",
