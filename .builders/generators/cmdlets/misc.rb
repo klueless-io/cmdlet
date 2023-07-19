@@ -17,18 +17,6 @@ KManager.action :misc_commands do
         RUBY
       end
       .cmdlet do
-        name :omit
-        aliases               %i[ignore comment_out]
-        description           'this content will not get written out, useful for commenting out code'
-        result                'empty stting'
-
-        parameter             :value, 'value to omit', param_type: 'String|Int'
-
-        ruby <<-RUBY
-          ''
-        RUBY
-      end
-      .cmdlet do
         name :format_json
         description           'FormatJson will take an object and write it out as pretty JSON'
         result                'value as pretty JSON string'
