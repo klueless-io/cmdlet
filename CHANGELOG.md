@@ -1,3 +1,10 @@
+## [0.12.2](https://github.com/klueless-io/cmdlet/compare/v0.12.1...v0.12.2) (2023-07-19)
+
+
+### Bug Fixes
+
+* remove omit cmdlet, not needed ([3c6966e](https://github.com/klueless-io/cmdlet/commit/3c6966e2b45fe83202363557e6d1bac495664555))
+
 ## [0.12.1](https://github.com/klueless-io/cmdlet/compare/v0.12.0...v0.12.1) (2023-07-18)
 
 
