@@ -1,3 +1,11 @@
+## [0.12.4](https://github.com/klueless-io/cmdlet/compare/v0.12.3...v0.12.4) (2023-07-19)
+
+
+### Bug Fixes
+
+* add sample command ([fa1fa5f](https://github.com/klueless-io/cmdlet/commit/fa1fa5f1930bb6e217c10a8ecddbf9ce690915cc))
+* add sample command ([7d27579](https://github.com/klueless-io/cmdlet/commit/7d27579dd02027db8b3bb2d56a548e843f69d962))
+
 ## [0.12.3](https://github.com/klueless-io/cmdlet/compare/v0.12.2...v0.12.3) (2023-07-19)
 
 
