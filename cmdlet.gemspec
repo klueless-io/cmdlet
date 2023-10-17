@@ -39,7 +39,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   # spec.extensions    = ['ext/cmdlet/extconf.rb']
 
-  spec.add_dependency 'activesupport', '~> 7'
+  spec.add_dependency 'activesupport', '~> 7.0.8' # 7.1.0 and 7.1.1 are causing issues with active_support/deprecator
   spec.add_dependency 'k_config', '~> 0'
   # spec.add_dependency 'k_log', '~> 0.0.0'
   # spec.add_dependency 'k_type', '~> 0.0.0'
