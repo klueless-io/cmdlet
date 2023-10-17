@@ -1,3 +1,10 @@
+## [0.13.1](https://github.com/klueless-io/cmdlet/compare/v0.13.0...v0.13.1) (2023-10-17)
+
+
+### Bug Fixes
+
+* fix activesupport version to 7.0.8 because of issues with active_support/deprecator ([ab22a07](https://github.com/klueless-io/cmdlet/commit/ab22a075d97d717fa94c1fd5579aefb987c37c75))
+
 # [0.13.0](https://github.com/klueless-io/cmdlet/compare/v0.12.5...v0.13.0) (2023-07-19)
 
 
