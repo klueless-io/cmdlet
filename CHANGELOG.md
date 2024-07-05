@@ -1,3 +1,10 @@
+## [0.13.2](https://github.com/klueless-io/cmdlet/compare/v0.13.1...v0.13.2) (2024-07-05)
+
+
+### Bug Fixes
+
+* update cops ([ba1ecf8](https://github.com/klueless-io/cmdlet/commit/ba1ecf86b3bc80616ba4cc4443afd29f52bb3447))
+
 ## [0.13.1](https://github.com/klueless-io/cmdlet/compare/v0.13.0...v0.13.1) (2023-10-17)
 
 
