@@ -1,3 +1,10 @@
+# [0.14.0](https://github.com/klueless-io/cmdlet/compare/v0.13.2...v0.14.0) (2024-10-11)
+
+
+### Features
+
+* update usage documentation ([5668b6d](https://github.com/klueless-io/cmdlet/commit/5668b6d8b6f4515ba53d7566630afacde9cbf35b))
+
 ## [0.13.2](https://github.com/klueless-io/cmdlet/compare/v0.13.1...v0.13.2) (2024-07-05)
 
 
