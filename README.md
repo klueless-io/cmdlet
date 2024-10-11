@@ -33,7 +33,7 @@ See all [stories](./STORIES.md)
 
 ## Usage
 
-See all [usage examples](./USAGE.md)
+See all [usage examples](./docs/usage.md)
 
 
 
